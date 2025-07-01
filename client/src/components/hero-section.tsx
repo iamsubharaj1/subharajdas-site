@@ -1,6 +1,7 @@
 import { Download, Mail, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import profileImage from "@assets/01_1751370479401.png";
 
 export default function HeroSection() {
   const handleDownloadResume = async () => {
@@ -74,8 +75,12 @@ export default function HeroSection() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-8xl text-white shadow-2xl">
-              <User className="w-32 h-32" />
+            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-gradient-to-br from-blue-400 to-blue-600 shadow-2xl border-4 border-white/20">
+              <img 
+                src={profileImage} 
+                alt="Subharaj Das - Operations & Customer Excellence Leader" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

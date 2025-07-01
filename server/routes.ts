@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { z } from "zod";
 import { insertContactSubmissionSchema } from "@shared/schema";
+import { storage } from "./storage";
 import path from "path";
 import fs from "fs";
 
@@ -11,9 +12,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertContactSubmissionSchema.parse(req.body);
       
-      // In a real implementation, you would save to database and send email
-      // For now, we'll just log the submission and return success
-      console.log("Contact form submission:", validatedData);
+      // Save to database
+      const savedSubmission = await storage.createContactSubmission(validatedData);
+      console.log("Contact form submission saved:", savedSubmission);
       
       // Simulate email sending (replace with actual email service like nodemailer)
       console.log(`Sending email notification for contact from ${validatedData.email}`);

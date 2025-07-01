@@ -27,14 +27,15 @@ The application follows a monorepo structure with clear separation between clien
 
 ### Backend Architecture
 - **Framework**: Express.js with TypeScript
-- **Database ORM**: Drizzle ORM configured for PostgreSQL
-- **Session Storage**: PostgreSQL sessions with connect-pg-simple
+- **Database ORM**: Drizzle ORM with PostgreSQL integration
+- **Database Storage**: DatabaseStorage class implementing contact form persistence
 - **Development**: Hot reload with tsx for development server
 - **Production Build**: esbuild for server bundling
 
 ### Database Schema
 - **Contact Submissions Table**: Stores form submissions with fields for first name, last name, email, subject, message, and timestamps
-- **Database Provider**: Neon serverless PostgreSQL (configured via environment variables)
+- **Users Table**: Basic user structure for future authentication features
+- **Database Provider**: PostgreSQL with environment-based configuration
 
 ## Data Flow
 
@@ -81,6 +82,9 @@ The application is configured for deployment with:
 ```
 Changelog:
 - July 01, 2025. Initial setup
+- July 01, 2025. Added PostgreSQL database integration with contact form persistence
+- July 01, 2025. Integrated professional profile photo and enhanced testimonials with LinkedIn recommendations
+- July 01, 2025. Implemented DatabaseStorage with full CRUD operations for contact submissions
 ```
 
 ## User Preferences
