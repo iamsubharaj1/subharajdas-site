@@ -77,6 +77,26 @@ export default function ExperienceSection() {
             <Card className="bg-slate-50 border hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <div className="mb-4">
+                  <h3 className="text-xl font-bold text-slate-800">Business Development Manager</h3>
+                  <p className="text-lg text-primary font-semibold">Flinto Class @ Home</p>
+                  <p className="text-muted-foreground text-sm">Bengaluru • Mar 2021 – Aug 2021</p>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-2">
+                    <TrendingUp className="text-accent w-4 h-4" />
+                    <p className="text-sm text-slate-700"><strong>250% operational efficiency</strong> improvement via redesigned outreach</p>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Settings className="text-accent w-4 h-4" />
+                    <p className="text-sm text-slate-700"><strong>30% cost savings</strong> through process optimization workshops</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-50 border hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">Regional Sales & Operations Manager</h3>
                   <p className="text-lg text-primary font-semibold">SocietyNow</p>
                   <p className="text-muted-foreground text-sm">Nov 2019 – Nov 2020</p>
