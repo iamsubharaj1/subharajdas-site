@@ -56,6 +56,12 @@ export default function Navigation() {
               Testimonials
             </button>
             <button 
+              onClick={() => scrollToSection('linkedin-showcase')}
+              className="text-secondary hover:text-primary transition-colors"
+            >
+              LinkedIn
+            </button>
+            <button 
               onClick={() => scrollToSection('contact')}
               className="text-secondary hover:text-primary transition-colors"
             >
@@ -100,6 +106,12 @@ export default function Navigation() {
               className="block w-full text-left py-2 text-secondary hover:text-primary transition-colors"
             >
               Testimonials
+            </button>
+            <button 
+              onClick={() => scrollToSection('linkedin-showcase')}
+              className="block w-full text-left py-2 text-secondary hover:text-primary transition-colors"
+            >
+              LinkedIn
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
