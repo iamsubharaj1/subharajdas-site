@@ -53,7 +53,7 @@ export default function ExperienceSection() {
           </Card>
 
           {/* Previous Roles */}
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8 auto-rows-fr">
             <Card className="bg-slate-50 border hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <div className="mb-4">
