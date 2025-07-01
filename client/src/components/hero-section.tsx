@@ -66,7 +66,8 @@ export default function HeroSection() {
               <Button 
                 onClick={scrollToContact}
                 variant="outline"
-                className="border-2 border-white text-white px-8 py-3 font-semibold hover:bg-white hover:text-primary bg-transparent"
+                className="border-2 border-white text-white px-8 py-3 font-semibold hover:bg-white hover:text-primary bg-transparent !text-white"
+                style={{ color: 'white', backgroundColor: 'transparent' }}
               >
                 <Mail className="w-4 h-4 mr-2" />
                 Get In Touch
