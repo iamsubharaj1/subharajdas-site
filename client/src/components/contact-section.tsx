@@ -75,7 +75,21 @@ export default function ContactSection() {
       return;
     }
 
+    // Save to database and open mailto link
     submitContactForm.mutate(formData);
+    
+    // Create mailto link with form data
+    const mailtoSubject = encodeURIComponent(`Website Contact: ${formData.subject}`);
+    const mailtoBody = encodeURIComponent(
+      `Name: ${formData.firstName} ${formData.lastName}\n` +
+      `Email: ${formData.email}\n` +
+      `Subject: ${formData.subject}\n\n` +
+      `Message:\n${formData.message}\n\n` +
+      `---\nSent from subharajdas.com contact form`
+    );
+    
+    const mailtoLink = `mailto:88.srdas@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+    window.open(mailtoLink, '_blank');
   };
 
   const handleInputChange = (field: keyof ContactFormData, value: string) => {
