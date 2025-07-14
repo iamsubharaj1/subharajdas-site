@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Linkedin, Send } from "lucide-react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
+import { trackEvent } from "@/lib/analytics";
 
 interface ContactFormData {
   firstName: string;
@@ -32,6 +33,9 @@ export default function ContactSection() {
       return await apiRequest('POST', '/api/contact', data);
     },
     onSuccess: () => {
+      // Track successful form submission
+      trackEvent('form_submit', 'contact', 'contact_form_success');
+      
       toast({
         title: "Message sent successfully!",
         description: "Thank you for your message. I'll get back to you soon!",
@@ -77,6 +81,9 @@ export default function ContactSection() {
 
     // Save to database and open mailto link
     submitContactForm.mutate(formData);
+    
+    // Track mailto link click
+    trackEvent('email_click', 'contact', 'mailto_link');
     
     // Create mailto link with form data
     const mailtoSubject = encodeURIComponent(`Website Contact: ${formData.subject}`);
