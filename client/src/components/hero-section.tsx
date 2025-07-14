@@ -42,7 +42,7 @@ export default function HeroSection() {
                 <span className="text-blue-200"> Leader</span>
               </h1>
               <p className="text-xl lg:text-2xl text-blue-100 font-light">
-                12+ years of expertise in SaaS operations management, customer success strategy, and revenue operations optimization for high-growth companies
+                12+ years of expertise in B2B SaaS operations management, customer success strategy, client retention, customer onboarding, and revenue operations optimization for high-growth companies
               </p>
             </div>
             

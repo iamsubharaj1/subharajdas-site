@@ -109,7 +109,7 @@ export default function ContactSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Contact Subharaj Das - Operations Excellence Leader</h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Ready to discuss operations excellence, customer success strategies, SaaS operations optimization, or potential collaborations? Get in touch with Subharaj Das.
+            Ready to discuss operations excellence, customer success strategies, B2B SaaS operations, client retention, customer onboarding, or potential collaborations? Get in touch with Subharaj Das.
           </p>
         </div>
 

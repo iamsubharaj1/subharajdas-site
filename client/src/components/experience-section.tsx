@@ -9,7 +9,7 @@ export default function ExperienceSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-800 mb-4">Professional Experience in Operations Excellence</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Proven track record of driving operational excellence, customer success management, and revenue operations optimization across EdTech, FinTech, and SaaS industries
+            Proven track record of driving operational excellence, customer success management, client retention, customer onboarding, and revenue operations optimization across B2B SaaS, EdTech, and FinTech industries
           </p>
         </div>
 

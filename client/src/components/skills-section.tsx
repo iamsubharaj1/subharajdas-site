@@ -8,6 +8,7 @@ export default function SkillsSection() {
 
   const operationsSkills = [
     "Operations Management",
+    "B2B SaaS Operations", 
     "Process Optimization", 
     "Resource Management",
     "P&L Ownership",
@@ -17,7 +18,8 @@ export default function SkillsSection() {
   const customerSuccessSkills = [
     "Customer Success Management",
     "Customer Onboarding",
-    "Retention Management", 
+    "Client Retention", 
+    "B2B Client Success",
     "SLA Management",
     "Escalation Handling"
   ];
@@ -35,7 +37,7 @@ export default function SkillsSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-800 mb-4">Core Expertise in Operations & Customer Success</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive skill set spanning SaaS operations management, customer success strategy, process optimization, and revenue operations
+            Comprehensive skill set spanning B2B SaaS operations management, customer success strategy, client retention, customer onboarding, process optimization, and revenue operations
           </p>
         </div>
 
