@@ -7,9 +7,9 @@ export default function ExperienceSection() {
     <section id="experience" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-800 mb-4">Professional Experience</h2>
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">Professional Experience in Operations Excellence</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Proven track record of driving operational excellence and customer success across multiple industries
+            Proven track record of driving operational excellence, customer success management, and revenue operations optimization across EdTech, FinTech, and SaaS industries
           </p>
         </div>
 

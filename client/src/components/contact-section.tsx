@@ -107,9 +107,9 @@ export default function ContactSection() {
     <section id="contact" className="py-20 bg-slate-800 text-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Let's Connect</h2>
+          <h2 className="text-4xl font-bold mb-4">Contact Subharaj Das - Operations Excellence Leader</h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Ready to discuss operations excellence, customer success strategies, or potential collaborations?
+            Ready to discuss operations excellence, customer success strategies, SaaS operations optimization, or potential collaborations? Get in touch with Subharaj Das.
           </p>
         </div>
 
@@ -131,7 +131,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <div className="font-semibold text-lg">Phone</div>
-                <div className="text-slate-300">+91 7406235550</div>
+                <div className="text-slate-300">+91 9739941949</div>
               </div>
             </div>
 
@@ -152,12 +152,12 @@ export default function ContactSection() {
               <div>
                 <div className="font-semibold text-lg">LinkedIn</div>
                 <a 
-                  href="https://linkedin.com/in/srdas88" 
+                  href="https://linkedin.com/in/subharajdas" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-slate-300 hover:text-white transition-colors"
                 >
-                  linkedin.com/in/srdas88
+                  linkedin.com/in/subharajdas
                 </a>
               </div>
             </div>

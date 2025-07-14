@@ -33,9 +33,9 @@ export default function SkillsSection() {
     <section id="skills" className="py-20 bg-slate-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-800 mb-4">Core Expertise</h2>
+          <h2 className="text-4xl font-bold text-slate-800 mb-4">Core Expertise in Operations & Customer Success</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive skill set spanning operations management, customer success, and digital transformation
+            Comprehensive skill set spanning SaaS operations management, customer success strategy, process optimization, and revenue operations
           </p>
         </div>
 

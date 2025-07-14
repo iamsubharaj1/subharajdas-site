@@ -38,11 +38,11 @@ export default function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                Operations & Customer Excellence
+                Operations Excellence & Customer Success
                 <span className="text-blue-200"> Leader</span>
               </h1>
               <p className="text-xl lg:text-2xl text-blue-100 font-light">
-                12+ years of expertise building scalable operations and customer success frameworks for SaaS companies
+                12+ years of expertise in SaaS operations management, customer success strategy, and revenue operations optimization for high-growth companies
               </p>
             </div>
             
