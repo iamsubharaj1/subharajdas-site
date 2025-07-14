@@ -2,10 +2,14 @@ import { Download, Mail, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import profileImage from "@assets/01_1751370479401.png";
+import { trackEvent } from "@/lib/analytics";
 
 export default function HeroSection() {
   const handleDownloadResume = async () => {
     try {
+      // Track resume download event
+      trackEvent('file_download', 'resume', 'resume_pdf');
+      
       const response = await fetch('/api/resume/download');
       if (response.ok) {
         // In a real implementation, this would trigger the download
@@ -17,6 +21,9 @@ export default function HeroSection() {
   };
 
   const scrollToContact = () => {
+    // Track contact button click
+    trackEvent('navigation', 'contact', 'get_in_touch_button');
+    
     const element = document.getElementById('contact');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
