@@ -19,8 +19,12 @@ export default function FloatingCraftPost() {
   }, []);
 
   const handleCraftPostClick = () => {
+    console.log('Floating CraftPost button clicked - redirecting to craftpost.in');
+    
     trackEvent('external_link_click', 'navigation', 'floating_craftpost_button');
-    window.open('https://craftpost.in', '_blank', 'noopener,noreferrer');
+    
+    // Direct window location change for better compatibility
+    window.location.href = 'https://craftpost.in';
   };
 
   const toggleExpanded = () => {

@@ -5,11 +5,13 @@ import { trackEvent } from "@/lib/analytics";
 
 export default function CraftPostSection() {
   const handleCraftPostClick = () => {
+    console.log('CraftPost button clicked - redirecting to craftpost.in');
+    
     // Track the external link click
     trackEvent('external_link_click', 'navigation', 'craftpost_website');
     
-    // Open in new tab
-    window.open('https://craftpost.in', '_blank', 'noopener,noreferrer');
+    // Direct window location change for better compatibility
+    window.location.href = 'https://craftpost.in';
   };
 
   const features = [
