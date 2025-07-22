@@ -4,7 +4,7 @@ import ExperienceSection from "@/components/experience-section";
 import SkillsSection from "@/components/skills-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import LinkedInShowcase from "@/components/linkedin-showcase";
-import ContactSection from "@/components/contact-section";
+import CraftPostSection from "@/components/craftpost-section";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <SkillsSection />
       <TestimonialsSection />
       <LinkedInShowcase />
-      <ContactSection />
+      <CraftPostSection />
       <Footer />
     </div>
   );

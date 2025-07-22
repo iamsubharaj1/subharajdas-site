@@ -62,10 +62,10 @@ export default function Navigation() {
               LinkedIn
             </button>
             <button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection('craftpost')}
               className="text-secondary hover:text-primary transition-colors"
             >
-              Contact
+              CraftPost
             </button>
           </div>
 
@@ -114,10 +114,10 @@ export default function Navigation() {
               LinkedIn
             </button>
             <button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection('craftpost')}
               className="block w-full text-left py-2 text-secondary hover:text-primary transition-colors"
             >
-              Contact
+              CraftPost
             </button>
           </div>
         )}
