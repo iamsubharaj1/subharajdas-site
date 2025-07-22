@@ -1,4 +1,4 @@
-import { Download, Mail, User } from "lucide-react";
+import { Download, Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import profileImage from "@assets/01_1751370479401.png";
@@ -20,14 +20,19 @@ export default function HeroSection() {
     }
   };
 
-  const scrollToContact = () => {
-    // Track contact button click
-    trackEvent('navigation', 'contact', 'get_in_touch_button');
-    
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleEmailClick = () => {
+    trackEvent('email_click', 'contact', 'hero_email');
+    window.open('mailto:88.srdas@gmail.com', '_blank');
+  };
+
+  const handlePhoneClick = () => {
+    trackEvent('phone_click', 'contact', 'hero_phone');
+    window.open('tel:+919739941949', '_blank');
+  };
+
+  const handleLinkedInClick = () => {
+    trackEvent('linkedin_click', 'social', 'hero_linkedin');
+    window.open('https://linkedin.com/in/subharajdas', '_blank');
   };
 
   return (
@@ -62,23 +67,59 @@ export default function HeroSection() {
               </Card>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                onClick={handleDownloadResume}
-                className="bg-white text-primary px-8 py-3 font-semibold hover:bg-blue-50"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Download Resume
-              </Button>
-              <Button 
-                onClick={scrollToContact}
-                variant="outline"
-                className="border-2 border-white text-white px-8 py-3 font-semibold hover:bg-white hover:text-primary bg-transparent !text-white"
-                style={{ color: 'white', backgroundColor: 'transparent' }}
-              >
-                <Mail className="w-4 h-4 mr-2" />
-                Get In Touch
-              </Button>
+            {/* Contact Information */}
+            <div className="space-y-6">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-4 text-blue-100">Contact Information</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <Mail className="w-5 h-5 text-blue-200" />
+                    <a 
+                      href="mailto:88.srdas@gmail.com"
+                      onClick={handleEmailClick}
+                      className="text-white hover:text-blue-200 transition-colors font-medium"
+                    >
+                      88.srdas@gmail.com
+                    </a>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Phone className="w-5 h-5 text-blue-200" />
+                    <a 
+                      href="tel:+919739941949"
+                      onClick={handlePhoneClick}
+                      className="text-white hover:text-blue-200 transition-colors font-medium"
+                    >
+                      +91-9739941949
+                    </a>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <MapPin className="w-5 h-5 text-blue-200" />
+                    <span className="text-white">Bengaluru, India</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Linkedin className="w-5 h-5 text-blue-200" />
+                    <a 
+                      href="https://linkedin.com/in/subharajdas"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={handleLinkedInClick}
+                      className="text-white hover:text-blue-200 transition-colors font-medium"
+                    >
+                      linkedin.com/in/subharajdas
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex justify-center sm:justify-start">
+                <Button 
+                  onClick={handleDownloadResume}
+                  className="bg-white text-primary px-8 py-3 font-semibold hover:bg-blue-50"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Resume
+                </Button>
+              </div>
             </div>
           </div>
 
