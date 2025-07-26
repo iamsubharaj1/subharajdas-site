@@ -23,8 +23,17 @@ export default function FloatingCraftPost() {
     
     trackEvent('external_link_click', 'navigation', 'floating_craftpost_button');
     
-    // Direct window location change for better compatibility
-    window.location.href = 'https://craftpost.in';
+    // Try opening in new tab first, fallback to current window
+    try {
+      const newWindow = window.open('https://www.craftpost.in', '_blank', 'noopener,noreferrer');
+      if (!newWindow) {
+        // If popup blocked, try current window
+        window.location.href = 'https://www.craftpost.in';
+      }
+    } catch (error) {
+      console.error('Error opening CraftPost:', error);
+      window.location.href = 'https://www.craftpost.in';
+    }
   };
 
   const toggleExpanded = () => {

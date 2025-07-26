@@ -67,7 +67,7 @@ export default function Footer() {
               </div>
               <div>
                 <a 
-                  href="https://craftpost.in"
+                  href="https://www.craftpost.in"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors block"
