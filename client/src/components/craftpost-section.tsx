@@ -5,22 +5,13 @@ import { trackEvent } from "@/lib/analytics";
 
 export default function CraftPostSection() {
   const handleCraftPostClick = () => {
-    console.log('CraftPost button clicked - redirecting to craftpost.in');
+    console.log('TESTING: CraftPost button clicked - forcing redirect to www.craftpost.in');
     
     // Track the external link click
     trackEvent('external_link_click', 'navigation', 'craftpost_website');
     
-    // Try opening in new tab first, fallback to current window
-    try {
-      const newWindow = window.open('https://www.craftpost.in', '_blank', 'noopener,noreferrer');
-      if (!newWindow) {
-        // If popup blocked, try current window
-        window.location.href = 'https://www.craftpost.in';
-      }
-    } catch (error) {
-      console.error('Error opening CraftPost:', error);
-      window.location.href = 'https://www.craftpost.in';
-    }
+    // Force redirect - no popup blocking issues
+    window.location.href = 'https://www.craftpost.in';
   };
 
   const features = [
@@ -104,7 +95,7 @@ export default function CraftPostSection() {
                     className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-200 transform hover:scale-105"
                   >
                     <ExternalLink className="mr-2 h-5 w-5" />
-                    Visit CraftPost.in
+                    Visit www.CraftPost.in
                   </Button>
                   
                   <p className="text-sm text-muted-foreground">

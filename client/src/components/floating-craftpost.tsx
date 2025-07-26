@@ -19,21 +19,12 @@ export default function FloatingCraftPost() {
   }, []);
 
   const handleCraftPostClick = () => {
-    console.log('Floating CraftPost button clicked - redirecting to craftpost.in');
+    console.log('TESTING: Floating CraftPost button clicked - forcing redirect to www.craftpost.in');
     
     trackEvent('external_link_click', 'navigation', 'floating_craftpost_button');
     
-    // Try opening in new tab first, fallback to current window
-    try {
-      const newWindow = window.open('https://www.craftpost.in', '_blank', 'noopener,noreferrer');
-      if (!newWindow) {
-        // If popup blocked, try current window
-        window.location.href = 'https://www.craftpost.in';
-      }
-    } catch (error) {
-      console.error('Error opening CraftPost:', error);
-      window.location.href = 'https://www.craftpost.in';
-    }
+    // Force redirect - no popup blocking issues  
+    window.location.href = 'https://www.craftpost.in';
   };
 
   const toggleExpanded = () => {
@@ -107,7 +98,7 @@ export default function FloatingCraftPost() {
                 className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium"
               >
                 <ExternalLink className="mr-2 h-4 w-4" />
-                Visit CraftPost.in
+                Visit www.CraftPost.in
               </Button>
               
               <p className="text-xs text-slate-500 text-center">
