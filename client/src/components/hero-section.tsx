@@ -22,12 +22,12 @@ export default function HeroSection() {
 
   const handleEmailClick = () => {
     trackEvent('email_click', 'contact', 'hero_email');
-    window.open('mailto:88.srdas@gmail.com', '_blank');
+    window.open('mailto:iamsubharaj1@gmail.com', '_blank');
   };
 
   const handlePhoneClick = () => {
     trackEvent('phone_click', 'contact', 'hero_phone');
-    window.open('tel:+919739941949', '_blank');
+    window.open('tel:+919742189357', '_blank');
   };
 
   const handleLinkedInClick = () => {
@@ -75,26 +75,26 @@ export default function HeroSection() {
                   <div className="flex items-center space-x-3">
                     <Mail className="w-5 h-5 text-blue-200" />
                     <a 
-                      href="mailto:88.srdas@gmail.com"
+                      href="mailto:iamsubharaj1@gmail.com"
                       onClick={handleEmailClick}
                       className="text-white hover:text-blue-200 transition-colors font-medium"
                     >
-                      88.srdas@gmail.com
+                      iamsubharaj1@gmail.com
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="w-5 h-5 text-blue-200" />
                     <a 
-                      href="tel:+919739941949"
+                      href="tel:+919742189357"
                       onClick={handlePhoneClick}
                       className="text-white hover:text-blue-200 transition-colors font-medium"
                     >
-                      +91-9739941949
+                      +91-9742189357
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin className="w-5 h-5 text-blue-200" />
-                    <span className="text-white">Bengaluru, India</span>
+                    <span className="text-white">Bengaluru, Karnataka</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Linkedin className="w-5 h-5 text-blue-200" />

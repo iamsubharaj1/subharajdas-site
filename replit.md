@@ -95,6 +95,8 @@ Changelog:
 - July 01, 2025. Implemented DatabaseStorage with full CRUD operations for contact submissions
 - July 14, 2025. Integrated Google Analytics tracking with page views and contact form event tracking
 - July 14, 2025. Implemented comprehensive SEO optimization with structured data, enhanced meta tags, sitemap, and keyword optimization
+- July 26, 2025. Updated contact information throughout website and resume: email changed to iamsubharaj1@gmail.com, phone to +91-9742189357
+- July 26, 2025. Fixed CraftPost redirection issue using window.location.href for proper navigation to craftpost.in
 ```
 
 ## User Preferences

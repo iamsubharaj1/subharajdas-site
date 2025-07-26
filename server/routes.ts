@@ -43,9 +43,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Resume download endpoint
   app.get("/api/resume/download", (req, res) => {
     try {
-      // In a real implementation, you would serve the actual resume file
-      // For now, we'll return a placeholder response
-      const resumePath = path.join(process.cwd(), "attached_assets", "Subharaj Das_1752478209200.pdf");
+      // Use the latest resume file
+      const resumePath = path.join(process.cwd(), "attached_assets", "Subharaj Das_1753525748886.pdf");
       
       if (fs.existsSync(resumePath)) {
         res.download(resumePath, "Subharaj_Das_Resume.pdf");

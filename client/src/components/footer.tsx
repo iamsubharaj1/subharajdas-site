@@ -25,26 +25,26 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4" />
                 <a 
-                  href="mailto:88.srdas@gmail.com"
+                  href="mailto:iamsubharaj1@gmail.com"
                   onClick={handleEmailClick}
                   className="hover:text-white transition-colors"
                 >
-                  88.srdas@gmail.com
+                  iamsubharaj1@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4" />
                 <a 
-                  href="tel:+919739941949"
+                  href="tel:+919742189357"
                   onClick={handlePhoneClick}
                   className="hover:text-white transition-colors"
                 >
-                  +91-9739941949
+                  +91-9742189357
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4" />
-                <span>Bengaluru, India</span>
+                <span>Bengaluru, Karnataka</span>
               </div>
             </div>
           </div>
