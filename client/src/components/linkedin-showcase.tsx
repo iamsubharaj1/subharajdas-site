@@ -11,7 +11,7 @@ export default function LinkedInShowcase() {
       title: "Building Scalable Operations: Lessons from 12+ Years in SaaS",
       description: "Key insights on operational excellence and customer success strategies that drove 121% revenue growth across multiple organizations.",
       image: "/api/placeholder/400/250",
-      link: "https://linkedin.com/in/srdas88",
+      link: "https://www.linkedin.com/in/subharajdas/",
       engagement: { views: 2500, likes: 89, comments: 23 }
     },
     {
@@ -19,7 +19,7 @@ export default function LinkedInShowcase() {
       title: "The Future of Customer Success in Operations",
       description: "Sharing my thoughts on how customer onboarding and retention strategies are evolving in the post-COVID business landscape.",
       image: "/api/placeholder/400/250", 
-      link: "https://linkedin.com/in/srdas88",
+      link: "https://www.linkedin.com/in/subharajdas/",
       engagement: { views: 1800, likes: 65, comments: 18 }
     },
     {
@@ -27,7 +27,7 @@ export default function LinkedInShowcase() {
       title: "Operations Excellence Framework",
       description: "A comprehensive guide I developed for scaling operational efficiency across 141 locations at All Sports Fit.",
       image: "/api/placeholder/400/250",
-      link: "https://linkedin.com/in/srdas88",
+      link: "https://www.linkedin.com/in/subharajdas/",
       engagement: { views: 3200, likes: 120, comments: 35 }
     }
   ];
@@ -85,7 +85,7 @@ export default function LinkedInShowcase() {
             className="mt-6 bg-[#0077B5] hover:bg-[#005885] text-white"
           >
             <a 
-              href="https://linkedin.com/in/srdas88" 
+              href="https://www.linkedin.com/in/subharajdas/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center"
