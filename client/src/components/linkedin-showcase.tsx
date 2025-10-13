@@ -35,6 +35,29 @@ export default function LinkedInShowcase() {
   // Sample recent posts
   const recentPosts = [
     {
+      content: `Startups in Bengaluru: "We're burning $5M a month, but vibes are immaculate."
+Startups in Mangaluru: "Here's ₹264cr revenue, 25% EBITDA. Exit at ₹950cr."
+
+₹950 crore is not the headline. #Mangaluru is.
+
+R Systems just picked up Novigo Solutions. ₹400 crore upfront. Performance-linked stock could take it close to ₹950 crore.
+
+What does that signal? Low-code and intelligent #automation are not buzzwords. They are P&L positive machines.
+
+Novigo hit ₹264 crore in #FY25. Delivered 25% #EBITDA. Scaled to nearly 1,000 people. That is operating discipline, not luck.
+
+Credit where it is due. At R Systems, Nitesh Bansal is sharpening a product engineering playbook that travels well across markets. Founder Satinder Singh Rekhi built the ambition and appetite for outcomes, not optics. At Novigo, Praveen Kumar Kalbhavi and Mohammed Hanif proved coastal talent can build category leaders, quietly and consistently.
+
+This is bigger than one deal. It is a coastal thesis for India. When #LowCodeNoCode meets #IntelligentAutomation, enterprises do not ask for slideware, they ask for integrations. And this is exactly the kind of #SaaSMergers execution that turns "tier 2" into "top tier."
+
+Your take, especially if you have built or acquired outside the big metros.
+
+Hot take: The next SaaS unicorn won't be from Bengaluru or Chennai. It'll be from whichever city has fewer investors giving "gyan" and more founders giving EBITDA.`,
+      timestamp: "1mo",
+      engagement: { likes: 245, comments: 11, shares: 3, impressions: 53190 },
+      type: "insight"
+    },
+    {
       content: "Excited to share that our operations team achieved a 25% increase in client satisfaction this quarter! The key was implementing scalable training platforms that emphasized customer excellence. When you invest in your team's growth, the results speak for themselves. #OperationsExcellence #CustomerSuccess",
       timestamp: "3 days ago",
       engagement: { likes: 156, comments: 42, shares: 18 },
@@ -45,12 +68,6 @@ export default function LinkedInShowcase() {
       timestamp: "1 week ago", 
       engagement: { likes: 203, comments: 67, shares: 31 },
       type: "insight"
-    },
-    {
-      content: "Reflecting on my journey from Operations Specialist to Head of Operations - the constant has been a focus on building systems that scale. Whether it's onboarding 100+ centers in two weeks or optimizing processes for efficiency, systematic thinking drives results. #CareerGrowth #ProcessOptimization",
-      timestamp: "2 weeks ago",
-      engagement: { likes: 89, comments: 28, shares: 12 },
-      type: "reflection"
     }
   ];
 
@@ -168,8 +185,14 @@ export default function LinkedInShowcase() {
                         </div>
                         <Badge variant="outline" className="capitalize">{post.type}</Badge>
                       </div>
-                      <p className="text-slate-700 leading-relaxed mb-4">{post.content}</p>
+                      <p className="text-slate-700 leading-relaxed mb-4 whitespace-pre-line">{post.content}</p>
                       <div className="flex items-center space-x-6 text-sm text-slate-500">
+                        {post.engagement.impressions && (
+                          <span className="flex items-center space-x-1 text-slate-600 font-semibold">
+                            <Eye className="w-4 h-4" />
+                            <span>{post.engagement.impressions.toLocaleString()} impressions</span>
+                          </span>
+                        )}
                         <button className="flex items-center space-x-1 hover:text-primary transition-colors">
                           <Heart className="w-4 h-4" />
                           <span>{post.engagement.likes}</span>
