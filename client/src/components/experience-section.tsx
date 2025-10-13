@@ -79,16 +79,16 @@ export default function ExperienceSection() {
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-white">AVP – Operations & Onboarding</h3>
                   <p className="text-lg text-orange-400 font-semibold">Edustoke</p>
-                  <p className="text-muted-foreground text-sm">Bengaluru • Mar 2022 – Sep 2022</p>
+                  <p className="text-slate-400 text-sm">Bengaluru • Mar 2022 – Sep 2022</p>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
                     <TrendingUp className="text-accent w-4 h-4" />
-                    <p className="text-sm text-slate-700"><strong>35% operational efficiency</strong> improvement</p>
+                    <p className="text-sm text-slate-200"><strong>35% operational efficiency</strong> improvement</p>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Users className="text-accent w-4 h-4" />
-                    <p className="text-sm text-slate-700">Onboarded <strong>100+ centers</strong> securing ₹18L revenue</p>
+                    <p className="text-sm text-slate-200">Onboarded <strong>100+ centers</strong> securing ₹18L revenue</p>
                   </div>
                 </div>
               </CardContent>
@@ -98,17 +98,17 @@ export default function ExperienceSection() {
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-white">Business Development Manager</h3>
-                  <p className="text-lg text-primary font-semibold">Flinto Class @ Home</p>
-                  <p className="text-muted-foreground text-sm">Bengaluru • Mar 2021 – Aug 2021</p>
+                  <p className="text-lg text-orange-400 font-semibold">Flinto Class @ Home</p>
+                  <p className="text-slate-400 text-sm">Bengaluru • Mar 2021 – Aug 2021</p>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
                     <TrendingUp className="text-accent w-4 h-4" />
-                    <p className="text-sm text-slate-700"><strong>250% operational efficiency</strong> improvement via redesigned outreach</p>
+                    <p className="text-sm text-slate-200"><strong>250% operational efficiency</strong> improvement via redesigned outreach</p>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Settings className="text-accent w-4 h-4" />
-                    <p className="text-sm text-slate-700"><strong>30% cost savings</strong> through process optimization workshops</p>
+                    <p className="text-sm text-slate-200"><strong>30% cost savings</strong> through process optimization workshops</p>
                   </div>
                 </div>
               </CardContent>
@@ -118,17 +118,17 @@ export default function ExperienceSection() {
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-white">Regional Sales & Operations Manager</h3>
-                  <p className="text-lg text-primary font-semibold">SocietyNow</p>
-                  <p className="text-muted-foreground text-sm">Pune • Nov 2019 – Nov 2020</p>
+                  <p className="text-lg text-orange-400 font-semibold">SocietyNow</p>
+                  <p className="text-slate-400 text-sm">Pune • Nov 2019 – Nov 2020</p>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
                     <TrendingUp className="text-accent w-4 h-4" />
-                    <p className="text-sm text-slate-700"><strong>55% revenue growth</strong> and 83% client acquisition</p>
+                    <p className="text-sm text-slate-200"><strong>55% revenue growth</strong> and 83% client acquisition</p>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Smartphone className="text-accent w-4 h-4" />
-                    <p className="text-sm text-slate-700">Led launch of <strong>3 mobile apps</strong></p>
+                    <p className="text-sm text-slate-200">Led launch of <strong>3 mobile apps</strong></p>
                   </div>
                 </div>
               </CardContent>
@@ -138,17 +138,17 @@ export default function ExperienceSection() {
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-white">Assistant Manager</h3>
-                  <p className="text-lg text-primary font-semibold">Safeducate</p>
-                  <p className="text-muted-foreground text-sm">Delhi • Mar 2019 – Oct 2019</p>
+                  <p className="text-lg text-orange-400 font-semibold">Safeducate</p>
+                  <p className="text-slate-400 text-sm">Delhi • Mar 2019 – Oct 2019</p>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
                     <Users className="text-accent w-4 h-4" />
-                    <p className="text-sm text-slate-700">Trained <strong>1000+ Business Development Managers</strong> online</p>
+                    <p className="text-sm text-slate-200">Trained <strong>1000+ Business Development Managers</strong> online</p>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Settings className="text-accent w-4 h-4" />
-                    <p className="text-sm text-slate-700"><strong>30% team efficiency</strong> via digital training & Salesforce</p>
+                    <p className="text-sm text-slate-200"><strong>30% team efficiency</strong> via digital training & Salesforce</p>
                   </div>
                 </div>
               </CardContent>
@@ -158,17 +158,17 @@ export default function ExperienceSection() {
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-white">Sales & Operations Manager</h3>
-                  <p className="text-lg text-primary font-semibold">MyGate</p>
-                  <p className="text-muted-foreground text-sm">Bengaluru & Pune • Oct 2017 – Feb 2019</p>
+                  <p className="text-lg text-orange-400 font-semibold">MyGate</p>
+                  <p className="text-slate-400 text-sm">Bengaluru & Pune • Oct 2017 – Feb 2019</p>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
                     <Settings className="text-accent w-4 h-4" />
-                    <p className="text-sm text-slate-700"><strong>90% operational efficiency</strong> achieved</p>
+                    <p className="text-sm text-slate-200"><strong>90% operational efficiency</strong> achieved</p>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Users className="text-accent w-4 h-4" />
-                    <p className="text-sm text-slate-700"><strong>95% client satisfaction</strong> rating secured</p>
+                    <p className="text-sm text-slate-200"><strong>95% client satisfaction</strong> rating secured</p>
                   </div>
                 </div>
               </CardContent>
@@ -178,17 +178,17 @@ export default function ExperienceSection() {
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-white">Operations Specialist</h3>
-                  <p className="text-lg text-primary font-semibold">Zenpower Technologies</p>
-                  <p className="text-muted-foreground text-sm">Feb 2012 – Sep 2017</p>
+                  <p className="text-lg text-orange-400 font-semibold">Zenpower Technologies</p>
+                  <p className="text-slate-400 text-sm">Feb 2012 – Sep 2017</p>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
                     <Calendar className="text-accent w-4 h-4" />
-                    <p className="text-sm text-slate-700"><strong>5+ years</strong> foundational operations experience</p>
+                    <p className="text-sm text-slate-200"><strong>5+ years</strong> foundational operations experience</p>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Building2 className="text-accent w-4 h-4" />
-                    <p className="text-sm text-slate-700">Built operational expertise in technology sector</p>
+                    <p className="text-sm text-slate-200">Built operational expertise in technology sector</p>
                   </div>
                 </div>
               </CardContent>
