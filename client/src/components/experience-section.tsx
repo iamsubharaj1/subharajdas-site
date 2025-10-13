@@ -4,24 +4,28 @@ import { TrendingUp, Users, Smartphone, Settings, Calendar, Building2 } from "lu
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-20 bg-gradient-to-b from-slate-50 to-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="experience" className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-orange-500/10 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent"></div>
+      
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-4">Professional Experience in Operations Excellence</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent mb-4">Professional Experience in Operations Excellence</h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Proven track record of driving operational excellence, customer success management, client retention, customer onboarding, and revenue operations optimization across B2B SaaS, EdTech, and FinTech industries
           </p>
         </div>
 
         <div className="space-y-12">
           {/* Current Role */}
-          <Card className="bg-gradient-to-br from-orange-50 to-orange-100/50 border-l-4 border-orange-500 shadow-[0_20px_50px_rgba(249,115,22,0.15)] hover:shadow-[0_30px_70px_rgba(249,115,22,0.25)] transition-all duration-300">
+          <Card className="bg-gradient-to-br from-orange-500 to-orange-600 border-l-4 border-orange-300 shadow-[0_20px_50px_rgba(249,115,22,0.4)] hover:shadow-[0_30px_70px_rgba(249,115,22,0.6)] transition-all duration-300 hover:-translate-y-1">
             <CardContent className="p-8">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-slate-800">Head of Operations</h3>
-                  <p className="text-xl text-primary font-semibold">All Sports Fit</p>
-                  <p className="text-muted-foreground">Bengaluru • Sep 2022 – Present</p>
+                  <h3 className="text-2xl font-bold text-white">Head of Operations</h3>
+                  <p className="text-xl text-orange-100 font-semibold">All Sports Fit</p>
+                  <p className="text-orange-200">Bengaluru • Sep 2022 – Present</p>
                 </div>
                 <div className="mt-4 lg:mt-0">
                   <Badge className="bg-accent text-white">Current Role</Badge>
@@ -30,38 +34,38 @@ export default function ExperienceSection() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <p className="text-slate-700">Spearheaded <strong>121% revenue growth</strong> across 141 locations</p>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <p className="text-white">Spearheaded <strong>121% revenue growth</strong> across 141 locations</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <p className="text-slate-700">Delivered <strong>40% productivity gains</strong> through comprehensive L&D programs</p>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <p className="text-white">Delivered <strong>40% productivity gains</strong> through comprehensive L&D programs</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <p className="text-slate-700">Boosted <strong>25% client satisfaction</strong> through operational training</p>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <p className="text-white">Boosted <strong>25% client satisfaction</strong> through operational training</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <p className="text-slate-700"><strong>20% reduction</strong> in operational costs annually</p>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <p className="text-white"><strong>20% reduction</strong> in operational costs annually</p>
                   </div>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <p className="text-slate-700">Built custom <strong>GPT copilots</strong> reducing response times by <strong>60%</strong></p>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <p className="text-white">Built custom <strong>GPT copilots</strong> reducing response times by <strong>60%</strong></p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <p className="text-slate-700">Deployed <strong>personalized chatbots</strong> boosting engagement</p>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <p className="text-white">Deployed <strong>personalized chatbots</strong> boosting engagement</p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <p className="text-slate-700">Automated workflows saving <strong>200+ man-hours monthly</strong></p>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <p className="text-white">Automated workflows saving <strong>200+ man-hours monthly</strong></p>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <p className="text-slate-700">Leveraged <strong>AI-driven CRM insights</strong> for forecasting & retention</p>
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                    <p className="text-white">Leveraged <strong>AI-driven CRM insights</strong> for forecasting & retention</p>
                   </div>
                 </div>
               </div>
@@ -70,11 +74,11 @@ export default function ExperienceSection() {
 
           {/* Previous Roles */}
           <div className="grid lg:grid-cols-2 gap-8 auto-rows-fr">
-            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.3)] transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-slate-800">AVP – Operations & Onboarding</h3>
-                  <p className="text-lg text-primary font-semibold">Edustoke</p>
+                  <h3 className="text-xl font-bold text-white">AVP – Operations & Onboarding</h3>
+                  <p className="text-lg text-orange-400 font-semibold">Edustoke</p>
                   <p className="text-muted-foreground text-sm">Bengaluru • Mar 2022 – Sep 2022</p>
                 </div>
                 <div className="space-y-3">
@@ -90,10 +94,10 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.3)] transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-slate-800">Business Development Manager</h3>
+                  <h3 className="text-xl font-bold text-white">Business Development Manager</h3>
                   <p className="text-lg text-primary font-semibold">Flinto Class @ Home</p>
                   <p className="text-muted-foreground text-sm">Bengaluru • Mar 2021 – Aug 2021</p>
                 </div>
@@ -110,10 +114,10 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.3)] transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-slate-800">Regional Sales & Operations Manager</h3>
+                  <h3 className="text-xl font-bold text-white">Regional Sales & Operations Manager</h3>
                   <p className="text-lg text-primary font-semibold">SocietyNow</p>
                   <p className="text-muted-foreground text-sm">Pune • Nov 2019 – Nov 2020</p>
                 </div>
@@ -130,10 +134,10 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.3)] transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-slate-800">Assistant Manager</h3>
+                  <h3 className="text-xl font-bold text-white">Assistant Manager</h3>
                   <p className="text-lg text-primary font-semibold">Safeducate</p>
                   <p className="text-muted-foreground text-sm">Delhi • Mar 2019 – Oct 2019</p>
                 </div>
@@ -150,10 +154,10 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.3)] transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-slate-800">Sales & Operations Manager</h3>
+                  <h3 className="text-xl font-bold text-white">Sales & Operations Manager</h3>
                   <p className="text-lg text-primary font-semibold">MyGate</p>
                   <p className="text-muted-foreground text-sm">Bengaluru & Pune • Oct 2017 – Feb 2019</p>
                 </div>
@@ -170,10 +174,10 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.3)] transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-slate-800">Operations Specialist</h3>
+                  <h3 className="text-xl font-bold text-white">Operations Specialist</h3>
                   <p className="text-lg text-primary font-semibold">Zenpower Technologies</p>
                   <p className="text-muted-foreground text-sm">Feb 2012 – Sep 2017</p>
                 </div>
