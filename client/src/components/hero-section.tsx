@@ -1,7 +1,7 @@
 import { Download, Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import profileImage from "@assets/01_1751370479401.png";
+import profileImage from "@assets/profile-new.png";
 import { trackEvent } from "@/lib/analytics";
 
 export default function HeroSection() {
@@ -47,7 +47,7 @@ export default function HeroSection() {
                 <span className="text-blue-200"> Leader</span>
               </h1>
               <p className="text-xl lg:text-2xl text-blue-100 font-light">
-                12+ years of expertise in B2B SaaS operations management, customer success strategy, client retention, customer onboarding, and revenue operations optimization for high-growth companies
+                12+ Yrs | ₹2Cr MRR | Customer & Process Excellence | Operations | Driving Revenue Growth, Scalable CX, Retention & Revenue | 121% Revenue Uplift | 35–90% Efficiency Gains | GEN AI and Chatbots with Agents | OKR Playbooks
               </p>
             </div>
             
