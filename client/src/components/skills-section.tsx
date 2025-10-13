@@ -3,16 +3,18 @@ import { Settings, Users, Code2 } from "lucide-react";
 
 export default function SkillsSection() {
   const technicalStack = [
-    "Salesforce", "Metabase", "Zoho", "Zendesk", "LeadSquared", "FreshDesk"
+    "Salesforce", "Metabase", "Zoho", "Zendesk", "LeadSquared", "FreshDesk", "Make.com", "Custom GPTs"
   ];
 
   const operationsSkills = [
     "Operations Management",
     "B2B SaaS Operations", 
     "Process Optimization", 
+    "Generative AI & Automation",
+    "Custom GPT Development",
+    "AI-Powered Analytics",
     "Resource Management",
-    "P&L Ownership",
-    "Operational Analytics"
+    "P&L Ownership"
   ];
 
   const customerSuccessSkills = [
