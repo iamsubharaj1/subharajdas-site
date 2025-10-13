@@ -221,11 +221,15 @@ Balaraman Ravindran Jake Wilczynski Manu Santhanam Sriram Rajamani Dr. Mukunthan
   ];
 
   return (
-    <section id="linkedin-showcase" className="py-20 bg-gradient-to-b from-white to-slate-50">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="linkedin-showcase" className="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-orange-500/10 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-purple-500/10 via-transparent to-transparent"></div>
+      
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-4">LinkedIn Professional Showcase</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent mb-4">LinkedIn Professional Showcase</h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Featured content, insights, and professional engagement from my LinkedIn presence
           </p>
           <Button 
@@ -246,25 +250,25 @@ Balaraman Ravindran Jake Wilczynski Manu Santhanam Sriram Rajamani Dr. Mukunthan
 
         {/* Featured Content Section */}
         <div className="mb-20">
-          <h3 className="text-3xl font-bold text-slate-800 mb-8 text-center">Featured Content</h3>
+          <h3 className="text-3xl font-bold text-white mb-8 text-center">Featured Content</h3>
           <div className="grid lg:grid-cols-3 gap-8">
             {featuredContent.map((item, index) => (
-              <Card key={index} className="bg-white border border-slate-200 shadow-lg hover:shadow-[0_25px_60px_rgba(148,163,184,0.3)] transition-all duration-300 transform hover:-translate-y-2">
+              <Card key={index} className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 shadow-lg hover:shadow-[0_25px_60px_rgba(249,115,22,0.3)] transition-all duration-300 transform hover:-translate-y-2">
                 <CardContent className="p-0">
-                  <div className="h-48 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                  <div className="h-48 bg-gradient-to-br from-orange-500/10 to-purple-500/10 flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        {item.type === "article" && <BookOpen className="w-8 h-8 text-primary" />}
-                        {item.type === "post" && <MessageCircle className="w-8 h-8 text-primary" />}
-                        {item.type === "media" && <TrendingUp className="w-8 h-8 text-primary" />}
+                      <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        {item.type === "article" && <BookOpen className="w-8 h-8 text-orange-400" />}
+                        {item.type === "post" && <MessageCircle className="w-8 h-8 text-orange-400" />}
+                        {item.type === "media" && <TrendingUp className="w-8 h-8 text-orange-400" />}
                       </div>
-                      <Badge variant="secondary" className="capitalize">{item.type}</Badge>
+                      <Badge variant="secondary" className="capitalize bg-slate-700 text-slate-200">{item.type}</Badge>
                     </div>
                   </div>
                   <div className="p-6">
-                    <h4 className="font-bold text-lg text-slate-800 mb-3 line-clamp-2">{item.title}</h4>
-                    <p className="text-slate-600 text-sm mb-4 line-clamp-3">{item.description}</p>
-                    <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
+                    <h4 className="font-bold text-lg text-white mb-3 line-clamp-2">{item.title}</h4>
+                    <p className="text-slate-300 text-sm mb-4 line-clamp-3">{item.description}</p>
+                    <div className="flex items-center justify-between text-sm text-slate-400 mb-4">
                       <div className="flex items-center space-x-4">
                         <span className="flex items-center">
                           <Eye className="w-4 h-4 mr-1" />
@@ -284,7 +288,7 @@ Balaraman Ravindran Jake Wilczynski Manu Santhanam Sriram Rajamani Dr. Mukunthan
                       asChild
                       variant="outline" 
                       size="sm" 
-                      className="w-full"
+                      className="w-full border-slate-600 text-slate-300 hover:bg-orange-500/10 hover:text-orange-400 hover:border-orange-500"
                     >
                       <a href={item.link} target="_blank" rel="noopener noreferrer">
                         View on LinkedIn
@@ -299,40 +303,40 @@ Balaraman Ravindran Jake Wilczynski Manu Santhanam Sriram Rajamani Dr. Mukunthan
 
         {/* Recent Posts Section */}
         <div className="mb-20">
-          <h3 className="text-3xl font-bold text-slate-800 mb-8 text-center">Recent Posts</h3>
+          <h3 className="text-3xl font-bold text-white mb-8 text-center">Recent Posts</h3>
           <div className="space-y-6 max-w-4xl mx-auto">
             {recentPosts.map((post, index) => (
-              <Card key={index} className="bg-white border border-slate-200 shadow-lg hover:shadow-[0_15px_40px_rgba(148,163,184,0.2)] transition-all duration-300 hover:-translate-y-1">
+              <Card key={index} className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 shadow-lg hover:shadow-[0_15px_40px_rgba(249,115,22,0.25)] transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Users className="w-6 h-6 text-primary" />
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Users className="w-6 h-6 text-orange-400" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <div className="font-semibold text-slate-800">Subharaj Das</div>
-                          <div className="text-sm text-slate-500">{post.timestamp}</div>
+                          <div className="font-semibold text-white">Subharaj Das</div>
+                          <div className="text-sm text-slate-400">{post.timestamp}</div>
                         </div>
-                        <Badge variant="outline" className="capitalize">{post.type}</Badge>
+                        <Badge variant="outline" className="capitalize border-slate-600 text-slate-300">{post.type}</Badge>
                       </div>
-                      <p className="text-slate-700 leading-relaxed mb-4 whitespace-pre-line">{post.content}</p>
-                      <div className="flex items-center space-x-6 text-sm text-slate-500">
+                      <p className="text-slate-200 leading-relaxed mb-4 whitespace-pre-line">{post.content}</p>
+                      <div className="flex items-center space-x-6 text-sm text-slate-400">
                         {post.engagement.impressions && (
-                          <span className="flex items-center space-x-1 text-slate-600 font-semibold">
+                          <span className="flex items-center space-x-1 text-orange-400 font-semibold">
                             <Eye className="w-4 h-4" />
                             <span>{post.engagement.impressions.toLocaleString()} impressions</span>
                           </span>
                         )}
-                        <button className="flex items-center space-x-1 hover:text-primary transition-colors">
+                        <button className="flex items-center space-x-1 hover:text-orange-400 transition-colors">
                           <Heart className="w-4 h-4" />
                           <span>{post.engagement.likes}</span>
                         </button>
-                        <button className="flex items-center space-x-1 hover:text-primary transition-colors">
+                        <button className="flex items-center space-x-1 hover:text-orange-400 transition-colors">
                           <MessageCircle className="w-4 h-4" />
                           <span>{post.engagement.comments}</span>
                         </button>
-                        <button className="flex items-center space-x-1 hover:text-primary transition-colors">
+                        <button className="flex items-center space-x-1 hover:text-orange-400 transition-colors">
                           <Share2 className="w-4 h-4" />
                           <span>{post.engagement.shares}</span>
                         </button>
@@ -347,27 +351,27 @@ Balaraman Ravindran Jake Wilczynski Manu Santhanam Sriram Rajamani Dr. Mukunthan
 
         {/* Featured Comments Section */}
         <div>
-          <h3 className="text-3xl font-bold text-slate-800 mb-8 text-center">Thoughtful Engagement</h3>
+          <h3 className="text-3xl font-bold text-white mb-8 text-center">Thoughtful Engagement</h3>
           <div className="space-y-6 max-w-5xl mx-auto">
             {featuredComments.map((comment, index) => (
-              <Card key={index} className="bg-white border border-slate-200 shadow-lg hover:shadow-[0_15px_40px_rgba(148,163,184,0.2)] transition-all duration-300 hover:-translate-y-1">
+              <Card key={index} className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 shadow-lg hover:shadow-[0_15px_40px_rgba(249,115,22,0.25)] transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
-                  <div className="mb-4 p-4 bg-slate-50 rounded-lg border-l-4 border-primary">
-                    <p className="text-slate-700 italic">"{comment.originalPost}"</p>
-                    <p className="text-sm text-slate-500 mt-2">— {comment.author}</p>
+                  <div className="mb-4 p-4 bg-slate-900/50 rounded-lg border-l-4 border-orange-500">
+                    <p className="text-slate-200 italic">"{comment.originalPost}"</p>
+                    <p className="text-sm text-slate-400 mt-2">— {comment.author}</p>
                   </div>
-                  <div className="pl-6 border-l-2 border-slate-200">
+                  <div className="pl-6 border-l-2 border-slate-700">
                     <div className="flex items-center space-x-3 mb-3">
-                      <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-                        <Users className="w-4 h-4 text-primary" />
+                      <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
+                        <Users className="w-4 h-4 text-orange-400" />
                       </div>
                       <div>
-                        <div className="font-semibold text-slate-800 text-sm">Subharaj Das</div>
-                        <div className="text-xs text-slate-500">{comment.timestamp}</div>
+                        <div className="font-semibold text-white text-sm">Subharaj Das</div>
+                        <div className="text-xs text-slate-400">{comment.timestamp}</div>
                       </div>
                     </div>
-                    <p className="text-slate-700 leading-relaxed mb-3">{comment.myComment}</p>
-                    <div className="flex items-center space-x-4 text-sm text-slate-500">
+                    <p className="text-slate-200 leading-relaxed mb-3">{comment.myComment}</p>
+                    <div className="flex items-center space-x-4 text-sm text-slate-400">
                       <span className="flex items-center">
                         <Heart className="w-4 h-4 mr-1" />
                         {comment.engagement.likes}
