@@ -253,8 +253,8 @@ Balaraman Ravindran Jake Wilczynski Manu Santhanam Sriram Rajamani Dr. Mukunthan
           <h3 className="text-3xl font-bold text-white mb-8 text-center">Featured Content</h3>
           <div className="grid lg:grid-cols-3 gap-8">
             {featuredContent.map((item, index) => (
-              <Card key={index} className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 shadow-lg hover:shadow-[0_25px_60px_rgba(249,115,22,0.3)] transition-all duration-300 transform hover:-translate-y-2">
-                <CardContent className="p-0">
+              <Card key={index} className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 shadow-lg hover:shadow-[0_25px_60px_rgba(249,115,22,0.3)] transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                <CardContent className="p-0 flex flex-col flex-grow">
                   <div className="h-48 bg-gradient-to-br from-orange-500/10 to-purple-500/10 flex items-center justify-center">
                     <div className="text-center">
                       <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -265,30 +265,28 @@ Balaraman Ravindran Jake Wilczynski Manu Santhanam Sriram Rajamani Dr. Mukunthan
                       <Badge variant="secondary" className="capitalize bg-slate-700 text-slate-200">{item.type}</Badge>
                     </div>
                   </div>
-                  <div className="p-6">
+                  <div className="p-6 flex flex-col h-full">
                     <h4 className="font-bold text-lg text-white mb-3 line-clamp-2">{item.title}</h4>
-                    <p className="text-slate-300 text-sm mb-4 line-clamp-3">{item.description}</p>
-                    <div className="flex items-center justify-between text-sm text-slate-400 mb-4">
-                      <div className="flex items-center space-x-4">
-                        <span className="flex items-center">
-                          <Eye className="w-4 h-4 mr-1" />
-                          {item.engagement.views}
-                        </span>
-                        <span className="flex items-center">
-                          <Heart className="w-4 h-4 mr-1" />
-                          {item.engagement.likes}
-                        </span>
-                        <span className="flex items-center">
-                          <MessageCircle className="w-4 h-4 mr-1" />
-                          {item.engagement.comments}
-                        </span>
-                      </div>
+                    <p className="text-slate-300 text-sm mb-4 line-clamp-3 flex-grow">{item.description}</p>
+                    <div className="flex items-center justify-start text-sm text-slate-300 mb-4 space-x-4">
+                      <span className="flex items-center">
+                        <Eye className="w-4 h-4 mr-1" />
+                        {item.engagement.views}
+                      </span>
+                      <span className="flex items-center">
+                        <Heart className="w-4 h-4 mr-1" />
+                        {item.engagement.likes}
+                      </span>
+                      <span className="flex items-center">
+                        <MessageCircle className="w-4 h-4 mr-1" />
+                        {item.engagement.comments}
+                      </span>
                     </div>
                     <Button 
                       asChild
                       variant="outline" 
                       size="sm" 
-                      className="w-full border-slate-600 text-slate-300 hover:bg-orange-500/10 hover:text-orange-400 hover:border-orange-500"
+                      className="w-full border-slate-600 bg-slate-800/50 text-white hover:bg-orange-500 hover:text-white hover:border-orange-500 font-semibold"
                     >
                       <a href={item.link} target="_blank" rel="noopener noreferrer">
                         View on LinkedIn
