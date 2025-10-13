@@ -1,20 +1,27 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Settings, Users, Code2 } from "lucide-react";
+import { Settings, Users, Code2, Sparkles } from "lucide-react";
 
 export default function SkillsSection() {
   const technicalStack = [
-    "Salesforce", "Metabase", "Zoho", "Zendesk", "LeadSquared", "FreshDesk", "Make.com", "Custom GPTs"
+    "Salesforce", "Metabase", "Zoho", "Zendesk", "LeadSquared", "FreshDesk"
   ];
 
   const operationsSkills = [
     "Operations Management",
     "B2B SaaS Operations", 
     "Process Optimization", 
-    "Generative AI & Automation",
-    "Custom GPT Development",
-    "AI-Powered Analytics",
     "Resource Management",
-    "P&L Ownership"
+    "P&L Ownership",
+    "Operational Analytics"
+  ];
+
+  const genAISkills = [
+    "Custom GPT Development",
+    "AI Chatbots & Agents",
+    "Workflow Automation",
+    "Make.com Integration",
+    "AI-Powered CRM",
+    "Process Automation"
   ];
 
   const customerSuccessSkills = [
@@ -43,7 +50,7 @@ export default function SkillsSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-4 gap-8">
           {/* Operations Excellence */}
           <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
             <CardContent className="p-8">
@@ -97,6 +104,26 @@ export default function SkillsSection() {
                 {technicalStack.map((tech, index) => (
                   <div key={index} className="bg-slate-50 rounded-lg px-3 py-2 text-center">
                     <span className="text-sm font-semibold text-slate-700">{tech}</span>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Gen AI & Automation */}
+          <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+            <CardContent className="p-8">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Sparkles className="text-purple-500 w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-800">Gen AI & Automation</h3>
+              </div>
+              <div className="space-y-3">
+                {genAISkills.map((skill, index) => (
+                  <div key={index} className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                    <span className="text-slate-700">{skill}</span>
                   </div>
                 ))}
               </div>
