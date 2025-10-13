@@ -4,10 +4,10 @@ import { TrendingUp, Users, Smartphone, Settings, Calendar, Building2 } from "lu
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-20 bg-white">
+    <section id="experience" className="py-20 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-800 mb-4">Professional Experience in Operations Excellence</h2>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-4">Professional Experience in Operations Excellence</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Proven track record of driving operational excellence, customer success management, client retention, customer onboarding, and revenue operations optimization across B2B SaaS, EdTech, and FinTech industries
           </p>
@@ -15,7 +15,7 @@ export default function ExperienceSection() {
 
         <div className="space-y-12">
           {/* Current Role */}
-          <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-primary">
+          <Card className="bg-gradient-to-br from-orange-50 to-orange-100/50 border-l-4 border-orange-500 shadow-xl shadow-orange-500/10 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300">
             <CardContent className="p-8">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6">
                 <div>
@@ -70,7 +70,7 @@ export default function ExperienceSection() {
 
           {/* Previous Roles */}
           <div className="grid lg:grid-cols-2 gap-8 auto-rows-fr">
-            <Card className="bg-slate-50 border hover:shadow-lg transition-shadow">
+            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-xl hover:shadow-slate-300/50 transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">AVP – Operations & Onboarding</h3>
@@ -90,7 +90,7 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-50 border hover:shadow-lg transition-shadow">
+            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-xl hover:shadow-slate-300/50 transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">Business Development Manager</h3>
@@ -110,7 +110,7 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-50 border hover:shadow-lg transition-shadow">
+            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-xl hover:shadow-slate-300/50 transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">Regional Sales & Operations Manager</h3>
@@ -130,7 +130,7 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-50 border hover:shadow-lg transition-shadow">
+            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-xl hover:shadow-slate-300/50 transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">Assistant Manager</h3>
@@ -150,7 +150,7 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-50 border hover:shadow-lg transition-shadow">
+            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-xl hover:shadow-slate-300/50 transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">Sales & Operations Manager</h3>
@@ -170,7 +170,7 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-slate-50 border hover:shadow-lg transition-shadow">
+            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-xl hover:shadow-slate-300/50 transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">Operations Specialist</h3>

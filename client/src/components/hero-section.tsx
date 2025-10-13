@@ -1,7 +1,8 @@
-import { Download, Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Download, Mail, Phone, MapPin, Linkedin, Bell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import profileImage from "@assets/profile-new.png";
+import bannerImage from "@assets/hero-banner.png";
 import { trackEvent } from "@/lib/analytics";
 
 export default function HeroSection() {
@@ -36,74 +37,82 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="pt-20 min-h-screen bg-gradient-to-br from-primary to-blue-700 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-black/20"></div>
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
+    <section id="home" className="pt-20 min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+      {/* Banner Section */}
+      <div className="relative w-full">
+        <img 
+          src={bannerImage} 
+          alt="Achieved Peak Performance Banner" 
+          className="w-full h-auto object-cover"
+        />
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                Operations Excellence & Customer Success
-                <span className="text-blue-200"> Leader</span>
+              <h1 className="text-4xl lg:text-5xl font-bold leading-tight bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+                Operations Excellence & Customer Success Leader
               </h1>
-              <p className="text-xl lg:text-2xl text-blue-100 font-light">
+              <p className="text-lg lg:text-xl text-slate-300 font-light">
                 12+ Yrs | ₹2Cr MRR | Customer & Process Excellence | Operations | Driving Revenue Growth, Scalable CX, Retention & Revenue | 121% Revenue Uplift | 35–90% Efficiency Gains | GEN AI and Chatbots with Agents | OKR Playbooks
               </p>
             </div>
             
             {/* Key Metrics */}
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-center p-4">
-                <div className="text-3xl font-bold text-accent">121%</div>
-                <div className="text-sm text-blue-200">Revenue Growth</div>
+              <Card className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 backdrop-blur-sm border-orange-500/30 text-center p-4 shadow-lg shadow-orange-500/20 hover:shadow-xl hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl font-bold text-orange-400">121%</div>
+                <div className="text-sm text-slate-300">Revenue Growth</div>
               </Card>
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-center p-4">
-                <div className="text-3xl font-bold text-accent">35%</div>
-                <div className="text-sm text-blue-200">Efficiency Gains</div>
+              <Card className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 backdrop-blur-sm border-orange-500/30 text-center p-4 shadow-lg shadow-orange-500/20 hover:shadow-xl hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl font-bold text-orange-400">35%</div>
+                <div className="text-sm text-slate-300">Efficiency Gains</div>
               </Card>
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-center p-4 col-span-2 lg:col-span-1">
-                <div className="text-3xl font-bold text-accent">₹2Cr+</div>
-                <div className="text-sm text-blue-200">Revenue Impact</div>
+              <Card className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 backdrop-blur-sm border-orange-500/30 text-center p-4 col-span-2 lg:col-span-1 shadow-lg shadow-orange-500/20 hover:shadow-xl hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl font-bold text-orange-400">₹2Cr+</div>
+                <div className="text-sm text-slate-300">Revenue Impact</div>
               </Card>
             </div>
 
             {/* Contact Information */}
             <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-                <h3 className="text-xl font-semibold mb-4 text-blue-100">Contact Information</h3>
+              <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6 shadow-xl shadow-black/20">
+                <h3 className="text-xl font-semibold mb-4 text-orange-400">Contact Information</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <Mail className="w-5 h-5 text-blue-200" />
+                    <Mail className="w-5 h-5 text-orange-400" />
                     <a 
                       href="mailto:iamsubharaj1@gmail.com"
                       onClick={handleEmailClick}
-                      className="text-white hover:text-blue-200 transition-colors font-medium"
+                      className="text-slate-200 hover:text-orange-400 transition-colors font-medium"
                     >
                       iamsubharaj1@gmail.com
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-blue-200" />
+                    <Phone className="w-5 h-5 text-orange-400" />
                     <a 
                       href="tel:+919742189357"
                       onClick={handlePhoneClick}
-                      className="text-white hover:text-blue-200 transition-colors font-medium"
+                      className="text-slate-200 hover:text-orange-400 transition-colors font-medium"
                     >
                       +91-9742189357
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-blue-200" />
-                    <span className="text-white">Bengaluru, Karnataka</span>
+                    <MapPin className="w-5 h-5 text-orange-400" />
+                    <span className="text-slate-200">Bengaluru, Karnataka</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Linkedin className="w-5 h-5 text-blue-200" />
+                    <Linkedin className="w-5 h-5 text-orange-400" />
                     <a 
                       href="https://linkedin.com/in/subharajdas"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={handleLinkedInClick}
-                      className="text-white hover:text-blue-200 transition-colors font-medium"
+                      className="text-slate-200 hover:text-orange-400 transition-colors font-medium"
                     >
                       linkedin.com/in/subharajdas
                     </a>
@@ -114,7 +123,7 @@ export default function HeroSection() {
               <div className="flex justify-center sm:justify-start">
                 <Button 
                   onClick={handleDownloadResume}
-                  className="bg-white text-primary px-8 py-3 font-semibold hover:bg-blue-50"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-3 font-semibold hover:from-orange-600 hover:to-orange-700 shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300 hover:-translate-y-1"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Download Resume
@@ -124,7 +133,7 @@ export default function HeroSection() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-gradient-to-br from-blue-400 to-blue-600 shadow-2xl border-4 border-white/20">
+            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-gradient-to-br from-orange-400 to-orange-600 shadow-2xl shadow-orange-500/40 border-4 border-orange-500/30 hover:shadow-orange-500/60 transition-all duration-300 hover:scale-105">
               <img 
                 src={profileImage} 
                 alt="Subharaj Das - Operations & Customer Excellence Leader" 

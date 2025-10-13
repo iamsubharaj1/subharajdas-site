@@ -48,10 +48,10 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-slate-50">
+    <section id="skills" className="py-20 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-800 mb-4">Core Expertise in Operations & Customer Success</h2>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-4">Core Expertise in Operations & Customer Success</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Comprehensive skill set spanning B2B SaaS operations management, customer success strategy, client retention, customer onboarding, process optimization, and revenue operations
           </p>
@@ -59,7 +59,7 @@ export default function SkillsSection() {
 
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Operations Excellence */}
-          <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="bg-white shadow-lg hover:shadow-2xl hover:shadow-slate-300/50 transition-all duration-300 hover:-translate-y-2">
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -79,7 +79,7 @@ export default function SkillsSection() {
           </Card>
 
           {/* Customer Success */}
-          <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="bg-white shadow-lg hover:shadow-2xl hover:shadow-orange-300/50 transition-all duration-300 hover:-translate-y-2">
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -99,7 +99,7 @@ export default function SkillsSection() {
           </Card>
 
           {/* Technical Stack */}
-          <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="bg-white shadow-lg hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 hover:-translate-y-2">
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -119,7 +119,7 @@ export default function SkillsSection() {
           </Card>
 
           {/* Gen AI & Automation */}
-          <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="bg-white shadow-lg hover:shadow-2xl hover:shadow-purple-300/50 transition-all duration-300 hover:-translate-y-2">
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
