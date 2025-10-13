@@ -128,7 +128,8 @@ export default function HeroSection() {
               <img 
                 src={profileImage} 
                 alt="Subharaj Das - Operations & Customer Excellence Leader" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center scale-110"
+                style={{ objectPosition: '50% 40%' }}
               />
             </div>
           </div>
