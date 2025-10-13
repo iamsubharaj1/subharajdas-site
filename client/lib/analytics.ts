@@ -18,16 +18,16 @@ export const initGA = () => {
   // Add Google Analytics script to the head
   const script1 = document.createElement('script');
   script1.async = true;
-  script1.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+  script1.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
   document.head.appendChild(script1);
 
-  // Initialize gtag
+  // Initialize gtag - using textContent instead of innerHTML for security
   const script2 = document.createElement('script');
-  script2.innerHTML = `
+  script2.textContent = `
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', '${measurementId}');
+    gtag('config', '${measurementId.replace(/[^a-zA-Z0-9-]/g, '')}');
   `;
   document.head.appendChild(script2);
 };
