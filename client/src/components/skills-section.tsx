@@ -3,7 +3,14 @@ import { Settings, Users, Code2, Sparkles } from "lucide-react";
 
 export default function SkillsSection() {
   const technicalStack = [
-    "Salesforce", "Metabase", "Zoho", "Zendesk", "LeadSquared", "FreshDesk"
+    "Salesforce",
+    "Metabase",
+    "Zoho",
+    "Zendesk",
+    "LeadSquared",
+    "FreshDesk",
+    "HubSpot",
+    "Intercom"
   ];
 
   const operationsSkills = [
@@ -100,10 +107,11 @@ export default function SkillsSection() {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-800">Technical Proficiency</h3>
               </div>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="space-y-3">
                 {technicalStack.map((tech, index) => (
-                  <div key={index} className="bg-slate-50 rounded-lg px-3 py-2 text-center">
-                    <span className="text-sm font-semibold text-slate-700">{tech}</span>
+                  <div key={index} className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                    <span className="text-slate-700">{tech}</span>
                   </div>
                 ))}
               </div>
