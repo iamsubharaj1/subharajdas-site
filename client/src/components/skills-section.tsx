@@ -59,7 +59,7 @@ export default function SkillsSection() {
 
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Operations Excellence */}
-          <Card className="bg-white shadow-lg hover:shadow-2xl hover:shadow-slate-300/50 transition-all duration-300 hover:-translate-y-2">
+          <Card className="bg-white shadow-lg hover:shadow-[0_25px_60px_rgba(148,163,184,0.3)] transition-all duration-300 hover:-translate-y-2">
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -79,7 +79,7 @@ export default function SkillsSection() {
           </Card>
 
           {/* Customer Success */}
-          <Card className="bg-white shadow-lg hover:shadow-2xl hover:shadow-orange-300/50 transition-all duration-300 hover:-translate-y-2">
+          <Card className="bg-white shadow-lg hover:shadow-[0_25px_60px_rgba(249,115,22,0.3)] transition-all duration-300 hover:-translate-y-2">
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -99,7 +99,7 @@ export default function SkillsSection() {
           </Card>
 
           {/* Technical Stack */}
-          <Card className="bg-white shadow-lg hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-300 hover:-translate-y-2">
+          <Card className="bg-white shadow-lg hover:shadow-[0_25px_60px_rgba(59,130,246,0.3)] transition-all duration-300 hover:-translate-y-2">
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -119,7 +119,7 @@ export default function SkillsSection() {
           </Card>
 
           {/* Gen AI & Automation */}
-          <Card className="bg-white shadow-lg hover:shadow-2xl hover:shadow-purple-300/50 transition-all duration-300 hover:-translate-y-2">
+          <Card className="bg-white shadow-lg hover:shadow-[0_25px_60px_rgba(168,85,247,0.3)] transition-all duration-300 hover:-translate-y-2">
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">

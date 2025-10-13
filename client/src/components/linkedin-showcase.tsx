@@ -221,16 +221,16 @@ Balaraman Ravindran Jake Wilczynski Manu Santhanam Sriram Rajamani Dr. Mukunthan
   ];
 
   return (
-    <section id="linkedin-showcase" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section id="linkedin-showcase" className="py-20 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-800 mb-4">LinkedIn Professional Showcase</h2>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-4">LinkedIn Professional Showcase</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Featured content, insights, and professional engagement from my LinkedIn presence
           </p>
           <Button 
             asChild
-            className="mt-6 bg-[#0077B5] hover:bg-[#005885] text-white"
+            className="mt-6 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-[0_10px_30px_rgba(249,115,22,0.35)] hover:shadow-[0_15px_40px_rgba(249,115,22,0.45)] transition-all duration-300 hover:-translate-y-1"
           >
             <a 
               href="https://www.linkedin.com/in/subharajdas/" 
@@ -249,7 +249,7 @@ Balaraman Ravindran Jake Wilczynski Manu Santhanam Sriram Rajamani Dr. Mukunthan
           <h3 className="text-3xl font-bold text-slate-800 mb-8 text-center">Featured Content</h3>
           <div className="grid lg:grid-cols-3 gap-8">
             {featuredContent.map((item, index) => (
-              <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <Card key={index} className="bg-white border border-slate-200 shadow-lg hover:shadow-[0_25px_60px_rgba(148,163,184,0.3)] transition-all duration-300 transform hover:-translate-y-2">
                 <CardContent className="p-0">
                   <div className="h-48 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
                     <div className="text-center">
@@ -302,7 +302,7 @@ Balaraman Ravindran Jake Wilczynski Manu Santhanam Sriram Rajamani Dr. Mukunthan
           <h3 className="text-3xl font-bold text-slate-800 mb-8 text-center">Recent Posts</h3>
           <div className="space-y-6 max-w-4xl mx-auto">
             {recentPosts.map((post, index) => (
-              <Card key={index} className="bg-white shadow-lg">
+              <Card key={index} className="bg-white border border-slate-200 shadow-lg hover:shadow-[0_15px_40px_rgba(148,163,184,0.2)] transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
@@ -350,7 +350,7 @@ Balaraman Ravindran Jake Wilczynski Manu Santhanam Sriram Rajamani Dr. Mukunthan
           <h3 className="text-3xl font-bold text-slate-800 mb-8 text-center">Thoughtful Engagement</h3>
           <div className="space-y-6 max-w-5xl mx-auto">
             {featuredComments.map((comment, index) => (
-              <Card key={index} className="bg-white shadow-lg">
+              <Card key={index} className="bg-white border border-slate-200 shadow-lg hover:shadow-[0_15px_40px_rgba(148,163,184,0.2)] transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
                   <div className="mb-4 p-4 bg-slate-50 rounded-lg border-l-4 border-primary">
                     <p className="text-slate-700 italic">"{comment.originalPost}"</p>

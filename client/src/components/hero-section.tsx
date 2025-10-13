@@ -62,15 +62,15 @@ export default function HeroSection() {
             
             {/* Key Metrics */}
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
-              <Card className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 backdrop-blur-sm border-orange-500/30 text-center p-4 shadow-lg shadow-orange-500/20 hover:shadow-xl hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-1">
+              <Card className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 backdrop-blur-sm border-orange-500/30 text-center p-4 shadow-[0_10px_40px_rgba(249,115,22,0.25)] hover:shadow-[0_20px_60px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1">
                 <div className="text-3xl font-bold text-orange-400">121%</div>
                 <div className="text-sm text-slate-300">Revenue Growth</div>
               </Card>
-              <Card className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 backdrop-blur-sm border-orange-500/30 text-center p-4 shadow-lg shadow-orange-500/20 hover:shadow-xl hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-1">
+              <Card className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 backdrop-blur-sm border-orange-500/30 text-center p-4 shadow-[0_10px_40px_rgba(249,115,22,0.25)] hover:shadow-[0_20px_60px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1">
                 <div className="text-3xl font-bold text-orange-400">35%</div>
                 <div className="text-sm text-slate-300">Efficiency Gains</div>
               </Card>
-              <Card className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 backdrop-blur-sm border-orange-500/30 text-center p-4 col-span-2 lg:col-span-1 shadow-lg shadow-orange-500/20 hover:shadow-xl hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-1">
+              <Card className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 backdrop-blur-sm border-orange-500/30 text-center p-4 col-span-2 lg:col-span-1 shadow-[0_10px_40px_rgba(249,115,22,0.25)] hover:shadow-[0_20px_60px_rgba(249,115,22,0.35)] transition-all duration-300 hover:-translate-y-1">
                 <div className="text-3xl font-bold text-orange-400">₹2Cr+</div>
                 <div className="text-sm text-slate-300">Revenue Impact</div>
               </Card>
@@ -78,7 +78,7 @@ export default function HeroSection() {
 
             {/* Contact Information */}
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6 shadow-xl shadow-black/20">
+              <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
                 <h3 className="text-xl font-semibold mb-4 text-orange-400">Contact Information</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
@@ -123,7 +123,7 @@ export default function HeroSection() {
               <div className="flex justify-center sm:justify-start">
                 <Button 
                   onClick={handleDownloadResume}
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-3 font-semibold hover:from-orange-600 hover:to-orange-700 shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300 hover:-translate-y-1"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-3 font-semibold hover:from-orange-600 hover:to-orange-700 shadow-[0_10px_30px_rgba(249,115,22,0.35)] hover:shadow-[0_15px_40px_rgba(249,115,22,0.45)] transition-all duration-300 hover:-translate-y-1"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Download Resume
@@ -133,7 +133,7 @@ export default function HeroSection() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-gradient-to-br from-orange-400 to-orange-600 shadow-2xl shadow-orange-500/40 border-4 border-orange-500/30 hover:shadow-orange-500/60 transition-all duration-300 hover:scale-105">
+            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-gradient-to-br from-orange-400 to-orange-600 shadow-[0_25px_60px_rgba(249,115,22,0.45)] border-4 border-orange-500/30 hover:shadow-[0_30px_80px_rgba(249,115,22,0.6)] transition-all duration-300 hover:scale-105">
               <img 
                 src={profileImage} 
                 alt="Subharaj Das - Operations & Customer Excellence Leader" 

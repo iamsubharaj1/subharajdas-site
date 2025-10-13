@@ -3,10 +3,10 @@ import { Quote, User } from "lucide-react";
 
 export default function TestimonialsSection() {
   return (
-    <section id="testimonials" className="py-20 bg-white">
+    <section id="testimonials" className="py-20 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-800 mb-4">What Leaders Say</h2>
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent mb-4">What Leaders Say</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Recommendations from industry leaders and partners
           </p>
@@ -14,7 +14,7 @@ export default function TestimonialsSection() {
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {/* Primary Testimonial */}
-          <Card className="bg-gradient-to-r from-primary to-blue-600 text-white lg:col-span-2">
+          <Card className="bg-gradient-to-r from-orange-500 to-orange-600 text-white lg:col-span-2 shadow-[0_25px_60px_rgba(249,115,22,0.35)] hover:shadow-[0_30px_80px_rgba(249,115,22,0.5)] transition-all duration-300 hover:-translate-y-1">
             <CardContent className="p-8 relative">
               <div className="absolute top-4 left-4 text-6xl text-white/20">
                 <Quote className="w-12 h-12" />
@@ -37,7 +37,7 @@ export default function TestimonialsSection() {
           </Card>
 
           {/* LinkedIn Recommendations */}
-          <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="bg-white border border-slate-200 shadow-lg hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
             <CardContent className="p-6">
               <div className="flex items-start space-x-2 mb-4">
                 <Quote className="text-accent w-6 h-6 mt-1 flex-shrink-0" />
@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
             </CardContent>
           </Card>
 
-          <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="bg-white border border-slate-200 shadow-lg hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
             <CardContent className="p-6">
               <div className="flex items-start space-x-2 mb-4">
                 <Quote className="text-accent w-6 h-6 mt-1 flex-shrink-0" />
@@ -71,7 +71,7 @@ export default function TestimonialsSection() {
             </CardContent>
           </Card>
 
-          <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="bg-white border border-slate-200 shadow-lg hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
             <CardContent className="p-6">
               <div className="flex items-start space-x-2 mb-4">
                 <Quote className="text-accent w-6 h-6 mt-1 flex-shrink-0" />
@@ -88,7 +88,7 @@ export default function TestimonialsSection() {
             </CardContent>
           </Card>
 
-          <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="bg-white border border-slate-200 shadow-lg hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
             <CardContent className="p-6">
               <div className="flex items-start space-x-2 mb-4">
                 <Quote className="text-accent w-6 h-6 mt-1 flex-shrink-0" />
@@ -105,7 +105,7 @@ export default function TestimonialsSection() {
             </CardContent>
           </Card>
 
-          <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="bg-white border border-slate-200 shadow-lg hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
             <CardContent className="p-6">
               <div className="flex items-start space-x-2 mb-4">
                 <Quote className="text-accent w-6 h-6 mt-1 flex-shrink-0" />
@@ -122,7 +122,7 @@ export default function TestimonialsSection() {
             </CardContent>
           </Card>
 
-          <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="bg-white border border-slate-200 shadow-lg hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
             <CardContent className="p-6">
               <div className="flex items-start space-x-2 mb-4">
                 <Quote className="text-accent w-6 h-6 mt-1 flex-shrink-0" />

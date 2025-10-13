@@ -15,7 +15,7 @@ export default function ExperienceSection() {
 
         <div className="space-y-12">
           {/* Current Role */}
-          <Card className="bg-gradient-to-br from-orange-50 to-orange-100/50 border-l-4 border-orange-500 shadow-xl shadow-orange-500/10 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300">
+          <Card className="bg-gradient-to-br from-orange-50 to-orange-100/50 border-l-4 border-orange-500 shadow-[0_20px_50px_rgba(249,115,22,0.15)] hover:shadow-[0_30px_70px_rgba(249,115,22,0.25)] transition-all duration-300">
             <CardContent className="p-8">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6">
                 <div>
@@ -70,7 +70,7 @@ export default function ExperienceSection() {
 
           {/* Previous Roles */}
           <div className="grid lg:grid-cols-2 gap-8 auto-rows-fr">
-            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-xl hover:shadow-slate-300/50 transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">AVP – Operations & Onboarding</h3>
@@ -90,7 +90,7 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-xl hover:shadow-slate-300/50 transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">Business Development Manager</h3>
@@ -110,7 +110,7 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-xl hover:shadow-slate-300/50 transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">Regional Sales & Operations Manager</h3>
@@ -130,7 +130,7 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-xl hover:shadow-slate-300/50 transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">Assistant Manager</h3>
@@ -150,7 +150,7 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-xl hover:shadow-slate-300/50 transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">Sales & Operations Manager</h3>
@@ -170,7 +170,7 @@ export default function ExperienceSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-xl hover:shadow-slate-300/50 transition-all duration-300 hover:-translate-y-1">
+            <Card className="bg-white border border-slate-200 shadow-md hover:shadow-[0_20px_50px_rgba(148,163,184,0.25)] transition-all duration-300 hover:-translate-y-1">
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">Operations Specialist</h3>
