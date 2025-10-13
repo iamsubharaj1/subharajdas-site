@@ -37,8 +37,6 @@ export default function ExperienceSection() {
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
                     <p className="text-slate-700">Delivered <strong>40% productivity gains</strong> through comprehensive L&D programs</p>
                   </div>
-                </div>
-                <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
                     <p className="text-slate-700">Boosted <strong>25% client satisfaction</strong> through operational training</p>
@@ -46,6 +44,24 @@ export default function ExperienceSection() {
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
                     <p className="text-slate-700"><strong>20% reduction</strong> in operational costs annually</p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    <p className="text-slate-700">Built custom <strong>GPT copilots</strong> reducing response times by <strong>60%</strong></p>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    <p className="text-slate-700">Deployed <strong>personalized chatbots</strong> boosting engagement</p>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    <p className="text-slate-700">Automated workflows saving <strong>200+ man-hours monthly</strong></p>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    <p className="text-slate-700">Leveraged <strong>AI-driven CRM insights</strong> for forecasting & retention</p>
                   </div>
                 </div>
               </div>
@@ -59,7 +75,7 @@ export default function ExperienceSection() {
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">AVP – Operations & Onboarding</h3>
                   <p className="text-lg text-primary font-semibold">Edustoke</p>
-                  <p className="text-muted-foreground text-sm">Mar 2022 – Sep 2022</p>
+                  <p className="text-muted-foreground text-sm">Bengaluru • Mar 2022 – Sep 2022</p>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
@@ -99,7 +115,7 @@ export default function ExperienceSection() {
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">Regional Sales & Operations Manager</h3>
                   <p className="text-lg text-primary font-semibold">SocietyNow</p>
-                  <p className="text-muted-foreground text-sm">Nov 2019 – Nov 2020</p>
+                  <p className="text-muted-foreground text-sm">Pune • Nov 2019 – Nov 2020</p>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
@@ -117,9 +133,29 @@ export default function ExperienceSection() {
             <Card className="bg-slate-50 border hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <div className="mb-4">
+                  <h3 className="text-xl font-bold text-slate-800">Assistant Manager</h3>
+                  <p className="text-lg text-primary font-semibold">Safeducate</p>
+                  <p className="text-muted-foreground text-sm">Delhi • Mar 2019 – Oct 2019</p>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-2">
+                    <Users className="text-accent w-4 h-4" />
+                    <p className="text-sm text-slate-700">Trained <strong>1000+ Business Development Managers</strong> online</p>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Settings className="text-accent w-4 h-4" />
+                    <p className="text-sm text-slate-700"><strong>30% team efficiency</strong> via digital training & Salesforce</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-50 border hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800">Sales & Operations Manager</h3>
                   <p className="text-lg text-primary font-semibold">MyGate</p>
-                  <p className="text-muted-foreground text-sm">Oct 2017 – Feb 2019</p>
+                  <p className="text-muted-foreground text-sm">Bengaluru & Pune • Oct 2017 – Feb 2019</p>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-2">
