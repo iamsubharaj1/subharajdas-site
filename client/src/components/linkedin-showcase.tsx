@@ -57,18 +57,6 @@ Hot take: The next SaaS unicorn won't be from Bengaluru or Chennai. It'll be fro
       engagement: { likes: 245, comments: 11, shares: 3, impressions: 53190 },
       type: "insight"
     },
-    {
-      content: "Excited to share that our operations team achieved a 25% increase in client satisfaction this quarter! The key was implementing scalable training platforms that emphasized customer excellence. When you invest in your team's growth, the results speak for themselves. #OperationsExcellence #CustomerSuccess",
-      timestamp: "3 days ago",
-      engagement: { likes: 156, comments: 42, shares: 18 },
-      type: "achievement"
-    },
-    {
-      content: "Leadership insight: One of the most valuable lessons from managing operations across 141 locations is that clear direction is critical to success. When teams know exactly what's expected and have the tools to deliver, productivity gains of 40% become achievable. #Leadership #Operations",
-      timestamp: "1 week ago", 
-      engagement: { likes: 203, comments: 67, shares: 31 },
-      type: "insight"
-    }
   ];
 
   // Sample thoughtful comments on industry posts

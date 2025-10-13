@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote, User, Settings, Users, TrendingUp } from "lucide-react";
+import { Quote, User } from "lucide-react";
 
 export default function TestimonialsSection() {
   return (
@@ -138,51 +138,6 @@ export default function TestimonialsSection() {
               </div>
             </CardContent>
           </Card>
-        </div>
-
-        {/* Future Courses Section */}
-        <div className="mt-20">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Future Courses</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Career management and operations excellence courses coming soon
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            <Card className="bg-white shadow-lg border-2 border-dashed border-slate-200">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Settings className="text-primary w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Operations Excellence Mastery</h3>
-                <p className="text-slate-600 mb-6">Learn proven frameworks for scaling operations and driving efficiency</p>
-                <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">Coming Soon</span>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-lg border-2 border-dashed border-slate-200">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="text-accent w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Customer Success Strategy</h3>
-                <p className="text-slate-600 mb-6">Build customer success programs that drive retention and growth</p>
-                <span className="bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold">Coming Soon</span>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-lg border-2 border-dashed border-slate-200">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="text-blue-500 w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">Career Management for Executives</h3>
-                <p className="text-slate-600 mb-6">Strategic career planning and personal branding for senior professionals</p>
-                <span className="bg-blue-500/10 text-blue-500 px-4 py-2 rounded-full text-sm font-semibold">Coming Soon</span>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </div>
     </section>
