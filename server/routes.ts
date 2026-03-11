@@ -284,6 +284,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const { registerScheduleRoutes } = await import('./routes-schedule.js');
   registerScheduleRoutes(app);
 
+  // Daily intelligence routes
+  const { registerDailyRoutes } = await import('./routes-daily.js');
+  registerDailyRoutes(app);
+
   const httpServer = createServer(app);
   return httpServer;
 }
