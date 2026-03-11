@@ -3,7 +3,7 @@ import { db } from "./db";
 import { users } from "@shared/schema";
 import { eq } from "drizzle-orm";
 
-// ─── Password hashing (crypto built-in, no bcrypt dep needed) ────────────────
+// ─── Password hashing ─────────────────────────────────────────────────────────
 
 export function hashPassword(password: string): { hash: string; salt: string } {
   const salt = crypto.randomBytes(32).toString("hex");
@@ -27,9 +27,9 @@ export function verifyPassword(password: string, hash: string, salt: string): bo
   }
 }
 
-// ─── Superadmin seeding (runs once on server start) ──────────────────────────
+// ─── Superadmin seeding with retry ───────────────────────────────────────────
 
-export async function seedSuperadmin(): Promise<void> {
+export async function seedSuperadmin(retries = 5, delayMs = 3000): Promise<void> {
   const email = process.env.SUPERADMIN_EMAIL;
   const password = process.env.SUPERADMIN_PASSWORD;
   const name = process.env.SUPERADMIN_NAME || "Subharaj Das";
@@ -39,39 +39,46 @@ export async function seedSuperadmin(): Promise<void> {
     return;
   }
 
-  try {
-    const existing = await db
-      .select({ id: users.id, role: users.role })
-      .from(users)
-      .where(eq(users.email, email.toLowerCase()))
-      .limit(1);
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const existing = await db
+        .select({ id: users.id, role: users.role })
+        .from(users)
+        .where(eq(users.email, email.toLowerCase()))
+        .limit(1);
 
-    if (existing.length > 0) {
-      // Ensure role is superadmin (in case it was changed)
-      if (existing[0].role !== "superadmin") {
-        await db
-          .update(users)
-          .set({ role: "superadmin" })
-          .where(eq(users.email, email.toLowerCase()));
-        console.log("[auth] Superadmin role enforced for", email);
-      } else {
-        console.log("[auth] Superadmin already exists —", email);
+      if (existing.length > 0) {
+        if (existing[0].role !== "superadmin") {
+          await db
+            .update(users)
+            .set({ role: "superadmin" })
+            .where(eq(users.email, email.toLowerCase()));
+          console.log("[auth] Superadmin role enforced for", email);
+        } else {
+          console.log("[auth] Superadmin already exists —", email);
+        }
+        return;
       }
-      return;
-    }
 
-    const { hash, salt } = hashPassword(password);
-    await db.insert(users).values({
-      name,
-      email: email.toLowerCase(),
-      passwordHash: hash,
-      salt,
-      role: "superadmin",
-      isActive: true,
-      onboardingComplete: false,
-    });
-    console.log("[auth] Superadmin created —", email);
-  } catch (err) {
-    console.error("[auth] Superadmin seed failed:", err);
+      const { hash, salt } = hashPassword(password);
+      await db.insert(users).values({
+        name,
+        email: email.toLowerCase(),
+        passwordHash: hash,
+        salt,
+        role: "superadmin",
+        isActive: true,
+        onboardingComplete: false,
+      });
+      console.log("[auth] Superadmin created —", email);
+      return;
+    } catch (err) {
+      console.warn(`[auth] Seed attempt ${attempt}/${retries} failed — retrying in ${delayMs}ms`);
+      if (attempt < retries) {
+        await new Promise((resolve) => setTimeout(resolve, delayMs));
+      } else {
+        console.error("[auth] Superadmin seed failed after all retries:", err);
+      }
+    }
   }
 }
