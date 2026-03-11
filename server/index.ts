@@ -7,6 +7,7 @@ import { setupVite, serveStatic, log } from "./vite";
 import { seedSuperadmin } from "./auth";
 
 const app = express();
+app.set("trust proxy", 1); // Required for secure cookies behind Render's reverse proxy
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 

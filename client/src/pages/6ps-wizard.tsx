@@ -36,12 +36,12 @@ function StepIndicator({ current, total }: { current: number; total: number }) {
           <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
             i + 1 < current ? "bg-emerald-500 text-black" :
             i + 1 === current ? "bg-orange-500 text-black" :
-            "bg-[#1a1a1a] text-[#555] border border-[#222]"
+            "bg-slate-800 text-slate-500 border border-slate-700"
           }`}>
             {i + 1 < current ? "✓" : i + 1}
           </div>
           {i < total - 1 && (
-            <div className={`h-px w-6 ${i + 1 < current ? "bg-emerald-500" : "bg-[#222]"}`} />
+            <div className={`h-px w-6 ${i + 1 < current ? "bg-emerald-500" : "bg-slate-700"}`} />
           )}
         </div>
       ))}
@@ -304,17 +304,17 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
   // ── RENDER ───────────────────────────────────────────────────────────────
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
+    <div className="min-h-screen bg-slate-900 text-white">
       {/* Header */}
-      <header className="border-b border-[#1a1a1a] px-6 py-4 flex items-center justify-between">
+      <header className="border-b border-slate-700/50 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center">
             <span className="text-black font-black text-xs">6P</span>
           </div>
-          <span className="font-semibold text-sm tracking-tight">6PointSomeone</span>
-          <span className="text-[#333] text-xs ml-1">/ Goal Setup</span>
+          <span className="font-semibold text-sm tracking-tight">6 Point Someone</span>
+          <span className="text-slate-600 text-xs ml-1">/ Goal Setup</span>
         </div>
-        <span className="text-xs text-[#444]">{user?.name}</span>
+        <span className="text-xs text-slate-600">{user?.name}</span>
       </header>
 
       <main className="max-w-2xl mx-auto px-6 py-10">
@@ -324,7 +324,7 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
         {step === 1 && (
           <div>
             <h1 className="text-2xl font-bold mb-2">What are your goals?</h1>
-            <p className="text-[#666] text-sm mb-8">Write every goal you're working toward. You'll pick your top 3 in the next step.</p>
+            <p className="text-slate-400 text-sm mb-8">Write every goal you're working toward. You'll pick your top 3 in the next step.</p>
 
             <div className="space-y-3 mb-6">
               {goalInputs.map((val, i) => (
@@ -334,12 +334,12 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
                     value={val}
                     onChange={(e) => updateGoalInput(i, e.target.value)}
                     placeholder={`Goal ${i + 1}…`}
-                    className="flex-1 bg-[#111] border border-[#222] rounded-lg px-4 py-3 text-white text-sm placeholder-[#444] focus:outline-none focus:border-orange-500/50 transition-colors"
+                    className="flex-1 bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-orange-500/50 transition-colors"
                   />
                   {goalInputs.length > 1 && (
                     <button
                       onClick={() => removeGoalInput(i)}
-                      className="w-10 h-10 mt-0.5 rounded-lg bg-[#111] border border-[#222] text-[#555] hover:text-red-400 hover:border-red-500/30 transition-colors flex items-center justify-center text-lg"
+                      className="w-10 h-10 mt-0.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-500 hover:text-red-400 hover:border-red-500/30 transition-colors flex items-center justify-center text-lg"
                     >×</button>
                   )}
                 </div>
@@ -368,7 +368,7 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
         {step === 2 && (
           <div>
             <h1 className="text-2xl font-bold mb-2">Pick your top {allGoals.length > 3 ? "3" : ""} focus goals</h1>
-            <p className="text-[#666] text-sm mb-8">
+            <p className="text-slate-400 text-sm mb-8">
               {allGoals.length <= 3
                 ? "Confirm which goals you want to focus on. The AI will analyse each one."
                 : "Select up to 3 goals to focus on right now. The AI will run deep analysis on each one."}
@@ -385,12 +385,12 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
                     className={`w-full text-left px-4 py-4 rounded-xl border transition-all ${
                       selected
                         ? "bg-orange-500/10 border-orange-500/40 text-white"
-                        : "bg-[#111] border-[#222] text-[#888] hover:border-[#333]"
+                        : "bg-slate-800 border-slate-700 text-slate-400 hover:border-slate-600"
                     }`}
                   >
                     <div className="flex items-center gap-3">
                       <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 ${
-                        selected ? "bg-orange-500 text-black" : "bg-[#1a1a1a] text-[#555] border border-[#333]"
+                        selected ? "bg-orange-500 text-black" : "bg-slate-800 text-slate-500 border border-slate-600"
                       }`}>
                         {selected ? rank : i + 1}
                       </div>
@@ -401,12 +401,12 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
               })}
             </div>
 
-            <p className="text-xs text-[#555] mb-6">{selectedIndices.length} / {Math.min(allGoals.length, 3)} selected</p>
+            <p className="text-xs text-slate-500 mb-6">{selectedIndices.length} / {Math.min(allGoals.length, 3)} selected</p>
 
             {error && <p className="text-red-400 text-sm mb-4">{error}</p>}
 
             <div className="flex gap-3">
-              <button onClick={() => setStep(1)} className="px-6 py-3 rounded-lg border border-[#222] text-[#666] text-sm hover:border-[#333] hover:text-white transition-colors">
+              <button onClick={() => setStep(1)} className="px-6 py-3 rounded-lg border border-slate-700 text-slate-400 text-sm hover:border-slate-600 hover:text-white transition-colors">
                 Back
               </button>
               <button
@@ -424,25 +424,25 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
         {step === 3 && (
           <div>
             <h1 className="text-2xl font-bold mb-2">Running 6-Tentacle Analysis</h1>
-            <p className="text-[#666] text-sm mb-8">
+            <p className="text-slate-400 text-sm mb-8">
               For each goal, AI is applying 6 book frameworks simultaneously. This takes 30–60 seconds.
             </p>
 
             <div className="space-y-6 mb-8">
               {goalInsights.map((gi, gIdx) => (
-                <div key={gi.goalId} className="bg-[#0f0f0f] border border-[#1a1a1a] rounded-xl p-5">
+                <div key={gi.goalId} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-5">
                   <div className="flex items-center gap-3 mb-4">
                     <div className={`w-2 h-2 rounded-full flex-shrink-0 ${
                       gi.loading ? "bg-orange-500 animate-pulse" :
-                      gi.insights.length > 0 ? "bg-emerald-500" : "bg-[#333]"
+                      gi.insights.length > 0 ? "bg-emerald-500" : "bg-slate-700"
                     }`} />
                     <h3 className="text-sm font-semibold text-white">{gi.goalTitle}</h3>
-                    {gi.loading && <span className="text-xs text-[#555] ml-auto">Analysing…</span>}
+                    {gi.loading && <span className="text-xs text-slate-500 ml-auto">Analysing…</span>}
                     {!gi.loading && gi.insights.length > 0 && (
                       <span className="text-xs text-emerald-500/60 ml-auto">✓ Done</span>
                     )}
                     {!gi.loading && gi.insights.length === 0 && gIdx > currentInsightGoal && (
-                      <span className="text-xs text-[#444] ml-auto">Queued</span>
+                      <span className="text-xs text-slate-600 ml-auto">Queued</span>
                     )}
                   </div>
 
@@ -454,8 +454,8 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
                             T{ins.tentacleNumber}
                           </span>
                           <div>
-                            <p className="text-xs text-[#555] mb-0.5">{BOOK_SHORT[ins.tentacleNumber]}</p>
-                            <p className="text-xs text-[#999] leading-relaxed">{ins.insight}</p>
+                            <p className="text-xs text-slate-500 mb-0.5">{BOOK_SHORT[ins.tentacleNumber]}</p>
+                            <p className="text-xs text-slate-400 leading-relaxed">{ins.insight}</p>
                           </div>
                         </div>
                       ))}
@@ -466,8 +466,8 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
                     <div className="space-y-2 mt-2">
                       {[1,2,3,4,5,6].map(n => (
                         <div key={n} className="flex gap-3 items-center">
-                          <div className="w-8 h-4 rounded-full bg-[#1a1a1a] animate-pulse" />
-                          <div className="flex-1 h-3 rounded bg-[#1a1a1a] animate-pulse" />
+                          <div className="w-8 h-4 rounded-full bg-slate-800 animate-pulse" />
+                          <div className="flex-1 h-3 rounded bg-slate-800 animate-pulse" />
                         </div>
                       ))}
                     </div>
@@ -492,7 +492,7 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
         {step === 4 && (
           <div>
             <h1 className="text-2xl font-bold mb-2">AI Time Estimates</h1>
-            <p className="text-[#666] text-sm mb-8">
+            <p className="text-slate-400 text-sm mb-8">
               Based on goal complexity, the AI has estimated how many weeks of focused work each goal requires. You can adjust in Settings later.
             </p>
 
@@ -500,16 +500,16 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
               {goalInsights.map((gi) => {
                 const goal = savedGoals.find(g => g.id === gi.goalId);
                 return (
-                  <div key={gi.goalId} className="bg-[#0f0f0f] border border-[#1a1a1a] rounded-xl p-5">
+                  <div key={gi.goalId} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-5">
                     <h3 className="text-sm font-semibold text-white mb-3">{gi.goalTitle}</h3>
                     <div className="flex gap-6">
                       <div>
-                        <p className="text-xs text-[#555] mb-1">Estimated weeks</p>
+                        <p className="text-xs text-slate-500 mb-1">Estimated weeks</p>
                         <p className="text-2xl font-bold text-orange-400">{goal?.estimatedWeeks ?? "—"}</p>
                       </div>
                       <div>
-                        <p className="text-xs text-[#555] mb-1">Toughness</p>
-                        <p className="text-2xl font-bold text-white">{goal?.toughnessScore ?? "—"}<span className="text-sm text-[#555]">/10</span></p>
+                        <p className="text-xs text-slate-500 mb-1">Toughness</p>
+                        <p className="text-2xl font-bold text-white">{goal?.toughnessScore ?? "—"}<span className="text-sm text-slate-500">/10</span></p>
                       </div>
                     </div>
                   </div>
@@ -518,7 +518,7 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
             </div>
 
             <div className="flex gap-3">
-              <button onClick={() => setStep(3)} className="px-6 py-3 rounded-lg border border-[#222] text-[#666] text-sm hover:border-[#333] hover:text-white transition-colors">
+              <button onClick={() => setStep(3)} className="px-6 py-3 rounded-lg border border-slate-700 text-slate-400 text-sm hover:border-slate-600 hover:text-white transition-colors">
                 Back
               </button>
               <button
@@ -535,7 +535,7 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
         {step === 5 && (
           <div>
             <h1 className="text-2xl font-bold mb-2">How are you working on this?</h1>
-            <p className="text-[#666] text-sm mb-8">This determines how tasks are distributed across your week.</p>
+            <p className="text-slate-400 text-sm mb-8">This determines how tasks are distributed across your week.</p>
 
             <div className="space-y-3 mb-8">
               <button
@@ -543,11 +543,11 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
                 className={`w-full text-left px-5 py-4 rounded-xl border transition-all ${
                   commitmentType === "fulltime"
                     ? "bg-orange-500/10 border-orange-500/40"
-                    : "bg-[#111] border-[#222] hover:border-[#333]"
+                    : "bg-slate-800 border-slate-700 hover:border-slate-600"
                 }`}
               >
                 <p className="text-sm font-semibold text-white mb-1">Full-time focus</p>
-                <p className="text-xs text-[#666]">Mon–Fri 10am–7:30pm (9.5 hrs) · Sat 3 hrs · Sun off</p>
+                <p className="text-xs text-slate-400">Mon–Fri 10am–7:30pm (9.5 hrs) · Sat 3 hrs · Sun off</p>
               </button>
 
               <button
@@ -555,17 +555,17 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
                 className={`w-full text-left px-5 py-4 rounded-xl border transition-all ${
                   commitmentType === "specific_hours"
                     ? "bg-orange-500/10 border-orange-500/40"
-                    : "bg-[#111] border-[#222] hover:border-[#333]"
+                    : "bg-slate-800 border-slate-700 hover:border-slate-600"
                 }`}
               >
                 <p className="text-sm font-semibold text-white mb-1">Specific hours per day</p>
-                <p className="text-xs text-[#666]">You choose how many hours. Distributed Mon–Sat.</p>
+                <p className="text-xs text-slate-400">You choose how many hours. Distributed Mon–Sat.</p>
               </button>
             </div>
 
             {commitmentType === "specific_hours" && (
               <div className="mb-8">
-                <label className="block text-xs text-[#666] mb-2 uppercase tracking-wider">Hours per day</label>
+                <label className="block text-xs text-slate-400 mb-2 uppercase tracking-wider">Hours per day</label>
                 <div className="flex items-center gap-4">
                   <input
                     type="range"
@@ -582,7 +582,7 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
             {error && <p className="text-red-400 text-sm mb-4">{error}</p>}
 
             <div className="flex gap-3">
-              <button onClick={() => setStep(4)} className="px-6 py-3 rounded-lg border border-[#222] text-[#666] text-sm hover:border-[#333] hover:text-white transition-colors">
+              <button onClick={() => setStep(4)} className="px-6 py-3 rounded-lg border border-slate-700 text-slate-400 text-sm hover:border-slate-600 hover:text-white transition-colors">
                 Back
               </button>
               <button
@@ -600,28 +600,28 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
         {step === 6 && (
           <div>
             <h1 className="text-2xl font-bold mb-2">Mark known special days</h1>
-            <p className="text-[#666] text-sm mb-8">
+            <p className="text-slate-400 text-sm mb-8">
               Add holidays, travel, or other days upfront. Tasks won't be assigned on travel/sick days. Holiday = 3 light hours. You can always add more later.
             </p>
 
             {/* Add day form */}
-            <div className="bg-[#0f0f0f] border border-[#1a1a1a] rounded-xl p-5 mb-5">
+            <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-5 mb-5">
               <div className="grid grid-cols-2 gap-3 mb-3">
                 <div>
-                  <label className="block text-xs text-[#555] mb-1.5 uppercase tracking-wider">Date</label>
+                  <label className="block text-xs text-slate-500 mb-1.5 uppercase tracking-wider">Date</label>
                   <input
                     type="date"
                     value={newDate}
                     onChange={(e) => setNewDate(e.target.value)}
-                    className="w-full bg-[#111] border border-[#222] rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-orange-500/50"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-orange-500/50"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs text-[#555] mb-1.5 uppercase tracking-wider">Type</label>
+                  <label className="block text-xs text-slate-500 mb-1.5 uppercase tracking-wider">Type</label>
                   <select
                     value={newType}
                     onChange={(e) => setNewType(e.target.value)}
-                    className="w-full bg-[#111] border border-[#222] rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-orange-500/50"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-orange-500/50"
                   >
                     <option value="holiday">Holiday (3 hrs light)</option>
                     <option value="travel">Travel (0 tasks)</option>
@@ -635,7 +635,7 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
                 value={newNote}
                 onChange={(e) => setNewNote(e.target.value)}
                 placeholder="Note (optional)"
-                className="w-full bg-[#111] border border-[#222] rounded-lg px-3 py-2.5 text-white text-sm placeholder-[#444] focus:outline-none focus:border-orange-500/50 mb-3"
+                className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-orange-500/50 mb-3"
               />
               <button
                 onClick={addSpecialDay}
@@ -649,16 +649,16 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
             {specialDayInputs.length > 0 && (
               <div className="space-y-2 mb-6">
                 {specialDayInputs.map((d, i) => (
-                  <div key={i} className="flex items-center gap-3 bg-[#0f0f0f] border border-[#1a1a1a] rounded-lg px-4 py-2.5">
-                    <span className="text-xs text-[#666] flex-shrink-0">{d.date}</span>
+                  <div key={i} className="flex items-center gap-3 bg-slate-800/50 border border-slate-700/50 rounded-lg px-4 py-2.5">
+                    <span className="text-xs text-slate-400 flex-shrink-0">{d.date}</span>
                     <span className={`text-xs px-2 py-0.5 rounded-full border ${
                       d.type === "holiday" ? "bg-amber-500/10 border-amber-500/30 text-amber-400" :
                       d.type === "travel" ? "bg-blue-500/10 border-blue-500/30 text-blue-400" :
                       d.type === "sick" ? "bg-red-500/10 border-red-500/30 text-red-400" :
                       "bg-purple-500/10 border-purple-500/30 text-purple-400"
                     }`}>{d.type}</span>
-                    {d.note && <span className="text-xs text-[#555] flex-1">{d.note}</span>}
-                    <button onClick={() => removeSpecialDay(i)} className="text-[#444] hover:text-red-400 transition-colors ml-auto text-lg leading-none">×</button>
+                    {d.note && <span className="text-xs text-slate-500 flex-1">{d.note}</span>}
+                    <button onClick={() => removeSpecialDay(i)} className="text-slate-600 hover:text-red-400 transition-colors ml-auto text-lg leading-none">×</button>
                   </div>
                 ))}
               </div>
@@ -667,7 +667,7 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
             {error && <p className="text-red-400 text-sm mb-4">{error}</p>}
 
             <div className="flex gap-3">
-              <button onClick={() => setStep(5)} className="px-6 py-3 rounded-lg border border-[#222] text-[#666] text-sm hover:border-[#333] hover:text-white transition-colors">
+              <button onClick={() => setStep(5)} className="px-6 py-3 rounded-lg border border-slate-700 text-slate-400 text-sm hover:border-slate-600 hover:text-white transition-colors">
                 Back
               </button>
               <button
@@ -689,21 +689,21 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
                 <span className="text-black font-black text-2xl">✓</span>
               </div>
               <h1 className="text-2xl font-bold mb-3">You're set up.</h1>
-              <p className="text-[#666] text-sm max-w-sm mx-auto leading-relaxed">
+              <p className="text-slate-400 text-sm max-w-sm mx-auto leading-relaxed">
                 Your goals are analysed across 6 frameworks. Your schedule is configured. Phase 3 will generate your week-by-week roadmap.
               </p>
             </div>
 
             {/* Summary */}
-            <div className="bg-[#0f0f0f] border border-[#1a1a1a] rounded-xl p-5 mb-8">
-              <h3 className="text-xs uppercase tracking-wider text-[#555] mb-4">Your primary goals</h3>
+            <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-5 mb-8">
+              <h3 className="text-xs uppercase tracking-wider text-slate-500 mb-4">Your primary goals</h3>
               <div className="space-y-2">
                 {savedGoals.map((g, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <span className="w-5 h-5 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 text-xs flex items-center justify-center font-bold flex-shrink-0">{i + 1}</span>
                     <span className="text-sm text-white">{g.title}</span>
                     {g.estimatedWeeks && (
-                      <span className="ml-auto text-xs text-[#555]">{g.estimatedWeeks}w</span>
+                      <span className="ml-auto text-xs text-slate-500">{g.estimatedWeeks}w</span>
                     )}
                   </div>
                 ))}
@@ -717,7 +717,7 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
               disabled={loading}
               className="w-full bg-orange-500 hover:bg-orange-400 disabled:opacity-50 text-black font-semibold rounded-lg py-3 text-sm transition-colors"
             >
-              {loading ? "Completing setup…" : "Enter 6PointSomeone →"}
+              {loading ? "Completing setup…" : "Enter 6 Point Someone →"}
             </button>
           </div>
         )}
