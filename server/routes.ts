@@ -280,6 +280,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const { register6PSRoutes } = await import('./routes-6ps.js');
   register6PSRoutes(app);
 
+  // Schedule routes
+  const { registerScheduleRoutes } = await import('./routes-schedule.js');
+  registerScheduleRoutes(app);
+
   const httpServer = createServer(app);
   return httpServer;
 }

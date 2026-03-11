@@ -9,11 +9,20 @@ import NotFound from "@/pages/not-found";
 import SixPSLogin from "@/pages/6ps-login";
 import SixPSDashboard from "@/pages/6ps-dashboard";
 import SixPSLaunchingSoon from "@/pages/6ps-launching-soon";
+import SixPSSchedule from "@/pages/6ps-schedule";
 import { useEffect } from "react";
 import { initGA } from "@/lib/analytics";
 import { useAnalytics } from "@/hooks/use-analytics";
 
 // ─── 6PS route guard ──────────────────────────────────────────────────────────
+
+function SixPSScheduleRoute() {
+  const { user, isLoading } = useAuth();
+  if (isLoading) return null;
+  if (!user) return <Redirect to="/6pointsomeone" />;
+  if (user.role !== "superadmin" && !user.onboardingComplete) return <Redirect to="/6pointsomeone" />;
+  return <SixPSSchedule />;
+}
 
 function SixPSRoute() {
   const { user, isLoading } = useAuth();
@@ -40,6 +49,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/6pointsomeone" component={SixPSRoute} />
+      <Route path="/6pointsomeone/schedule" component={SixPSScheduleRoute} />
       <Route path="/6ps" component={() => <Redirect to="/6pointsomeone" />} />
       <Route component={NotFound} />
     </Switch>
