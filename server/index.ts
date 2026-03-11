@@ -66,7 +66,7 @@ app.use((req, res, next) => {
 // ─── Boot ─────────────────────────────────────────────────────────────────────
 
 (async () => {
-  // Seed superadmin — retries up to 5x if Neon DB not ready yet
+  // Seed superadmin on startup (idempotent)
   await seedSuperadmin();
 
   const server = await registerRoutes(app);
