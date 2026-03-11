@@ -452,9 +452,9 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
         {/* ── STEP 3: AI tentacles running ── */}
         {step === 3 && (
           <div>
-            <h1 className="text-2xl font-bold mb-2">Running 6-Tentacle Analysis</h1>
+            <h1 className="text-2xl font-bold mb-2">Analysing Your Goals</h1>
             <p className="text-slate-400 text-sm mb-8">
-              For each goal, AI is applying 6 book frameworks simultaneously. This takes 30–60 seconds.
+              AI is building a multi-dimensional breakdown for each goal. This takes 30–60 seconds.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -476,16 +476,11 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
                   </div>
 
                   {gi.insights.length > 0 && (
-                    <div className="space-y-3">
-                      {gi.insights.map((ins) => (
-                        <div key={ins.id} className="flex gap-3">
-                          <span className={`text-xs px-2 py-0.5 rounded-full border flex-shrink-0 mt-0.5 ${BOOK_COLORS[ins.tentacleNumber]}`}>
-                            T{ins.tentacleNumber}
-                          </span>
-                          <div>
-                            <p className="text-xs text-slate-500 mb-0.5">{BOOK_SHORT[ins.tentacleNumber]}</p>
-                            <p className="text-xs text-slate-400 leading-relaxed">{ins.insight}</p>
-                          </div>
+                    <div className="space-y-4">
+                      {gi.insights.map((ins, idx) => (
+                        <div key={ins.id} className="border-l-2 border-slate-700 pl-3">
+                          <p className="text-xs font-semibold text-slate-500 mb-1 uppercase tracking-wider">Dimension {idx + 1}</p>
+                          <p className="text-xs text-slate-400 leading-relaxed">{ins.insight}</p>
                         </div>
                       ))}
                     </div>
