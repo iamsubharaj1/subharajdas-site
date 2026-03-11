@@ -276,6 +276,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // 6PS routes
+  const { register6PSRoutes } = await import('./routes-6ps.js');
+  register6PSRoutes(app);
+
   const httpServer = createServer(app);
   return httpServer;
 }
