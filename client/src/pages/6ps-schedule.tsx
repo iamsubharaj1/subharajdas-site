@@ -220,6 +220,27 @@ export default function SixPSSchedule() {
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
+      {/* Nav */}
+      <header className="border-b border-slate-700/50 bg-slate-900/80 backdrop-blur-sm px-6 py-4 flex items-center justify-between sticky top-0 z-10">
+        <div className="flex items-center gap-4">
+          <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src="/favicon.ico" alt="" className="w-6 h-6 rounded-full" onError={(e) => { (e.target as HTMLImageElement).style.display="none"; }} />
+            <span className="font-bold text-white text-sm hidden sm:block">Subharaj Das</span>
+          </a>
+          <span className="text-slate-700 text-xs">/</span>
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-md bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center">
+              <span className="text-black font-black text-xs">6P</span>
+            </div>
+            <span className="font-semibold text-sm">6 Point Someone</span>
+            <span className="text-slate-600 text-xs">/ Schedule</span>
+          </div>
+        </div>
+        <div className="flex items-center gap-4">
+          <a href="/6pointsomeone" className="text-xs text-slate-500 hover:text-white transition-colors">Dashboard</a>
+          <a href="/" className="text-xs text-slate-500 hover:text-white transition-colors hidden sm:block">← Home</a>
+        </div>
+      </header>
       <div className="max-w-5xl mx-auto px-6 py-8">
 
         {error && (

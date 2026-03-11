@@ -97,10 +97,12 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
   const [specificHours, setSpecificHours] = useState(6);
 
   // Step 6 — special days
-  const [specialDayInputs, setSpecialDayInputs] = useState<{ date: string; type: string; note: string }[]>([]);
-  const [newDate, setNewDate] = useState("");
+  const [specialDayInputs, setSpecialDayInputs] = useState<{ fromDate: string; toDate: string; type: string; note: string }[]>([]);
+  const [newFromDate, setNewFromDate] = useState("");
+  const [newToDate, setNewToDate] = useState("");
   const [newType, setNewType] = useState("holiday");
   const [newNote, setNewNote] = useState("");
+  const [skipSpecialDays, setSkipSpecialDays] = useState(false);
 
   // ── STEP 1 → 2: save goal list ───────────────────────────────────────────
 
@@ -254,9 +256,11 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
   // ── STEP 6: save special days ────────────────────────────────────────────
 
   function addSpecialDay() {
-    if (!newDate) { setError("Select a date."); return; }
-    setSpecialDayInputs([...specialDayInputs, { date: newDate, type: newType, note: newNote }]);
-    setNewDate("");
+    if (!newFromDate) { setError("Select a start date."); return; }
+    const to = newToDate || newFromDate;
+    setSpecialDayInputs([...specialDayInputs, { fromDate: newFromDate, toDate: to, type: newType, note: newNote }]);
+    setNewFromDate("");
+    setNewToDate("");
     setNewNote("");
     setError("");
   }
@@ -266,14 +270,28 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
   }
 
   async function handleStep6Next() {
+    if (skipSpecialDays) { setStep(7); return; }
     setLoading(true);
     try {
       if (specialDayInputs.length > 0) {
+        // Expand date ranges into individual days
+        const expandedDays: { date: string; type: string; note?: string }[] = [];
+        for (const entry of specialDayInputs) {
+          const start = new Date(entry.fromDate);
+          const end = new Date(entry.toDate);
+          for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+            expandedDays.push({
+              date: d.toISOString().split("T")[0],
+              type: entry.type,
+              note: entry.note || undefined,
+            });
+          }
+        }
         await fetch("/api/6ps/special-days", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           credentials: "include",
-          body: JSON.stringify({ days: specialDayInputs }),
+          body: JSON.stringify({ days: expandedDays }),
         });
       }
       setStep(7);
@@ -479,8 +497,14 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
             {error && <p className="text-red-400 text-sm mb-4">{error}</p>}
 
             <button
-              onClick={() => setStep(4)}
               disabled={!allInsightsDone()}
+              onClick={async () => {
+                // Re-fetch goals to get AI-populated estimatedWeeks + toughnessScore
+                const r = await fetch("/api/6ps/goals", { credentials: "include" });
+                const d = await r.json();
+                if (d.success) setSavedGoals(d.goals.filter((g: any) => g.isPrimary));
+                setStep(4);
+              }}
               className="w-full bg-orange-500 hover:bg-orange-400 disabled:opacity-30 disabled:cursor-not-allowed text-black font-semibold rounded-lg py-3 text-sm transition-colors"
             >
               {allInsightsDone() ? "Review Time Estimates →" : "Analysing goals…"}
@@ -611,8 +635,8 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
                   <label className="block text-xs text-slate-500 mb-1.5 uppercase tracking-wider">Date</label>
                   <input
                     type="date"
-                    value={newDate}
-                    onChange={(e) => setNewDate(e.target.value)}
+                    value={newFromDate}
+                    onChange={(e) => setNewFromDate(e.target.value)}
                     className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-orange-500/50"
                   />
                 </div>
@@ -650,11 +674,10 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
               <div className="space-y-2 mb-6">
                 {specialDayInputs.map((d, i) => (
                   <div key={i} className="flex items-center gap-3 bg-slate-800/50 border border-slate-700/50 rounded-lg px-4 py-2.5">
-                    <span className="text-xs text-slate-400 flex-shrink-0">{d.date}</span>
+                    <span className="text-xs text-slate-400 flex-shrink-0">{d.fromDate}{d.toDate !== d.fromDate ? ` → ${d.toDate}` : ""}</span>
                     <span className={`text-xs px-2 py-0.5 rounded-full border ${
                       d.type === "holiday" ? "bg-amber-500/10 border-amber-500/30 text-amber-400" :
                       d.type === "travel" ? "bg-blue-500/10 border-blue-500/30 text-blue-400" :
-                      d.type === "sick" ? "bg-red-500/10 border-red-500/30 text-red-400" :
                       "bg-purple-500/10 border-purple-500/30 text-purple-400"
                     }`}>{d.type}</span>
                     {d.note && <span className="text-xs text-slate-500 flex-1">{d.note}</span>}
