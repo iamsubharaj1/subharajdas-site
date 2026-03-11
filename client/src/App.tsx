@@ -39,8 +39,8 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/6pointsomething" component={SixPSRoute} />
-      <Route path="/6ps" component={() => <Redirect to="/6pointsomething" />} />
+      <Route path="/6pointsomeone" component={SixPSRoute} />
+      <Route path="/6ps" component={() => <Redirect to="/6pointsomeone" />} />
       <Route component={NotFound} />
     </Switch>
   );
