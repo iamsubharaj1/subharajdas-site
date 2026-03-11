@@ -67,6 +67,8 @@ app.use((req, res, next) => {
 
 (async () => {
   // Seed superadmin on every start (idempotent — skips if already exists)
+  // Small delay to let Neon WebSocket pool stabilise before first query
+  await new Promise((resolve) => setTimeout(resolve, 3000));
   await seedSuperadmin();
 
   const server = await registerRoutes(app);
