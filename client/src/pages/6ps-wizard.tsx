@@ -323,16 +323,27 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
-      {/* Header */}
-      <header className="border-b border-slate-700/50 px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center">
-            <span className="text-black font-black text-xs">6P</span>
+      {/* Header / Nav */}
+      <header className="border-b border-slate-700/50 bg-slate-900/80 backdrop-blur-sm px-6 py-4 flex items-center justify-between sticky top-0 z-10">
+        <div className="flex items-center gap-4">
+          <a href="/" className="font-bold text-white text-sm hover:text-orange-400 transition-colors">Subharaj Das</a>
+          <span className="text-slate-700">/</span>
+          <div className="flex items-center gap-2">
+            <div className="w-5 h-5 rounded bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center flex-shrink-0">
+              <span className="text-black font-black text-xs">6P</span>
+            </div>
+            <span className="text-sm font-semibold">6 Point Someone</span>
+            <span className="text-slate-600 text-xs">/ Goal Setup</span>
           </div>
-          <span className="font-semibold text-sm tracking-tight">6 Point Someone</span>
-          <span className="text-slate-600 text-xs ml-1">/ Goal Setup</span>
         </div>
-        <span className="text-xs text-slate-600">{user?.name}</span>
+        <div className="flex items-center gap-5">
+          <a href="/" className="text-xs text-slate-500 hover:text-white transition-colors">Home</a>
+          <a href="/#experience" className="text-xs text-slate-500 hover:text-white transition-colors hidden sm:block">Know Subharaj</a>
+          <a href="/#craftpost" className="text-xs text-slate-500 hover:text-white transition-colors hidden sm:block">CraftPost</a>
+          <a href="/#tools" className="text-xs text-slate-500 hover:text-white transition-colors hidden sm:block">Tools</a>
+          <a href="/#contact" className="text-xs bg-orange-500 hover:bg-orange-400 text-black font-semibold px-3 py-1.5 rounded-lg transition-colors hidden sm:block">Work With Me</a>
+          <span className="text-xs text-slate-600">{user?.name}</span>
+        </div>
       </header>
 
       <main className="max-w-2xl mx-auto px-6 py-10">
@@ -623,68 +634,104 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
         {/* ── STEP 6: Special days ── */}
         {step === 6 && (
           <div>
-            <h1 className="text-2xl font-bold mb-2">Mark known special days</h1>
-            <p className="text-slate-400 text-sm mb-8">
-              Add holidays, travel, or other days upfront. Tasks won't be assigned on travel/sick days. Holiday = 3 light hours. You can always add more later.
+            <h1 className="text-2xl font-bold mb-2">Mark planned holidays & travel</h1>
+            <p className="text-slate-400 text-sm mb-3">
+              Add known holidays and travel dates upfront so the system plans around them.
             </p>
-
-            {/* Add day form */}
-            <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-5 mb-5">
-              <div className="grid grid-cols-2 gap-3 mb-3">
-                <div>
-                  <label className="block text-xs text-slate-500 mb-1.5 uppercase tracking-wider">Date</label>
-                  <input
-                    type="date"
-                    value={newFromDate}
-                    onChange={(e) => setNewFromDate(e.target.value)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-orange-500/50"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs text-slate-500 mb-1.5 uppercase tracking-wider">Type</label>
-                  <select
-                    value={newType}
-                    onChange={(e) => setNewType(e.target.value)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-orange-500/50"
-                  >
-                    <option value="holiday">Holiday (3 hrs light)</option>
-                    <option value="travel">Travel (0 tasks)</option>
-                    <option value="sick">Sick (0 tasks, no penalty)</option>
-                    <option value="catchup">Catch-up day</option>
-                  </select>
-                </div>
-              </div>
-              <input
-                type="text"
-                value={newNote}
-                onChange={(e) => setNewNote(e.target.value)}
-                placeholder="Note (optional)"
-                className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-orange-500/50 mb-3"
-              />
-              <button
-                onClick={addSpecialDay}
-                className="text-sm text-orange-400 hover:text-orange-300 transition-colors flex items-center gap-1"
-              >
-                <span className="text-lg leading-none">+</span> Add this day
-              </button>
+            <div className="bg-slate-800/50 border border-slate-700/50 rounded-lg px-4 py-3 mb-6 space-y-1 text-xs text-slate-500">
+              <p>🏖 <span className="text-amber-400 font-medium">Holiday</span> — 3 hrs of light tasks assigned per day</p>
+              <p>✈ <span className="text-blue-400 font-medium">Travel</span> — No tasks assigned on these days</p>
+              <p>🤒 <span className="text-slate-400 font-medium">Sick days</span> — Mark during daily check-in, not here</p>
             </div>
 
-            {/* Added days list */}
-            {specialDayInputs.length > 0 && (
-              <div className="space-y-2 mb-6">
-                {specialDayInputs.map((d, i) => (
-                  <div key={i} className="flex items-center gap-3 bg-slate-800/50 border border-slate-700/50 rounded-lg px-4 py-2.5">
-                    <span className="text-xs text-slate-400 flex-shrink-0">{d.fromDate}{d.toDate !== d.fromDate ? ` → ${d.toDate}` : ""}</span>
-                    <span className={`text-xs px-2 py-0.5 rounded-full border ${
-                      d.type === "holiday" ? "bg-amber-500/10 border-amber-500/30 text-amber-400" :
-                      d.type === "travel" ? "bg-blue-500/10 border-blue-500/30 text-blue-400" :
-                      "bg-purple-500/10 border-purple-500/30 text-purple-400"
-                    }`}>{d.type}</span>
-                    {d.note && <span className="text-xs text-slate-500 flex-1">{d.note}</span>}
-                    <button onClick={() => removeSpecialDay(i)} className="text-slate-600 hover:text-red-400 transition-colors ml-auto text-lg leading-none">×</button>
-                  </div>
-                ))}
+            {/* Skip option */}
+            <button
+              onClick={() => setSkipSpecialDays(!skipSpecialDays)}
+              className={`w-full text-left px-4 py-3 rounded-xl border mb-5 transition-all ${
+                skipSpecialDays
+                  ? "bg-orange-500/10 border-orange-500/40 text-white"
+                  : "bg-slate-800/50 border-slate-700/50 text-slate-400 hover:border-slate-600"
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <div className={`w-4 h-4 rounded border flex items-center justify-center flex-shrink-0 ${skipSpecialDays ? "bg-orange-500 border-orange-500" : "border-slate-600"}`}>
+                  {skipSpecialDays && <span className="text-black text-xs font-bold">✓</span>}
+                </div>
+                <span className="text-sm font-medium">None — no planned holidays or travel, skip this step</span>
               </div>
+            </button>
+
+            {!skipSpecialDays && (
+              <>
+                {/* Add entry form */}
+                <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-5 mb-4">
+                  <div className="mb-3">
+                    <label className="block text-xs text-slate-500 mb-1.5 uppercase tracking-wider">Type</label>
+                    <select
+                      value={newType}
+                      onChange={(e) => setNewType(e.target.value)}
+                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-orange-500/50"
+                    >
+                      <option value="holiday">🏖 Holiday (3 hrs/day light tasks)</option>
+                      <option value="travel">✈ Travel (no tasks)</option>
+                      <option value="catchup">🔄 Catch-up day</option>
+                    </select>
+                  </div>
+                  <div className="grid grid-cols-2 gap-3 mb-3">
+                    <div>
+                      <label className="block text-xs text-slate-500 mb-1.5 uppercase tracking-wider">From date</label>
+                      <input
+                        type="date"
+                        value={newFromDate}
+                        onChange={(e) => setNewFromDate(e.target.value)}
+                        className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-orange-500/50"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-slate-500 mb-1.5 uppercase tracking-wider">To date <span className="normal-case text-slate-600">(blank = single day)</span></label>
+                      <input
+                        type="date"
+                        value={newToDate}
+                        onChange={(e) => setNewToDate(e.target.value)}
+                        className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-white text-sm focus:outline-none focus:border-orange-500/50"
+                      />
+                    </div>
+                  </div>
+                  <input
+                    type="text"
+                    value={newNote}
+                    onChange={(e) => setNewNote(e.target.value)}
+                    placeholder="Note (optional) — e.g. Diwali, Tech conference…"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-orange-500/50 mb-3"
+                  />
+                  <button
+                    onClick={addSpecialDay}
+                    className="text-sm text-orange-400 hover:text-orange-300 transition-colors flex items-center gap-1"
+                  >
+                    <span className="text-lg leading-none">+</span> Add entry
+                  </button>
+                </div>
+
+                {/* Added entries list */}
+                {specialDayInputs.length > 0 && (
+                  <div className="space-y-2 mb-4">
+                    {specialDayInputs.map((d, i) => (
+                      <div key={i} className="flex items-center gap-3 bg-slate-800/50 border border-slate-700/50 rounded-lg px-4 py-2.5">
+                        <span className={`text-xs px-2 py-0.5 rounded-full border flex-shrink-0 ${
+                          d.type === "holiday" ? "bg-amber-500/10 border-amber-500/30 text-amber-400" :
+                          d.type === "travel" ? "bg-blue-500/10 border-blue-500/30 text-blue-400" :
+                          "bg-purple-500/10 border-purple-500/30 text-purple-400"
+                        }`}>{d.type}</span>
+                        <span className="text-xs text-slate-400">
+                          {d.fromDate}{d.toDate !== d.fromDate ? ` → ${d.toDate}` : ""}
+                        </span>
+                        {d.note && <span className="text-xs text-slate-600 flex-1 truncate">{d.note}</span>}
+                        <button onClick={() => removeSpecialDay(i)} className="text-slate-600 hover:text-red-400 transition-colors ml-auto text-lg leading-none">×</button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </>
             )}
 
             {error && <p className="text-red-400 text-sm mb-4">{error}</p>}
@@ -698,7 +745,7 @@ export default function SixPSWizard({ onComplete }: { onComplete: () => void }) 
                 disabled={loading}
                 className="flex-1 bg-orange-500 hover:bg-orange-400 disabled:opacity-50 text-black font-semibold rounded-lg py-3 text-sm transition-colors"
               >
-                {loading ? "Saving…" : "Continue →"}
+                {loading ? "Saving…" : skipSpecialDays ? "Skip & Continue →" : "Continue →"}
               </button>
             </div>
           </div>
